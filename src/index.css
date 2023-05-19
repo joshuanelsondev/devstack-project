@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html, body, #root {
-  @apply bg-dark;
+  @apply bg-gradient-to-b from-primary to-dark;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
