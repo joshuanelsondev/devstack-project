@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   MdAccountCircle,
   MdHome,
@@ -11,15 +12,17 @@ import { RxDashboard } from "react-icons/rx";
 
 export default function Nav() {
     const [darkTheme, setDarkTheme] = useState(true);
+    const navigate = useNavigate();
 
     const toggleTheme = () => {
         setDarkTheme(!darkTheme);
     };
 
     return (
-      <div className="flex flex-col absolute top-[25%] gap-12 ml-10">
+      <div className="flex flex-col absolute top-[20%] gap-12 ml-10 z-10">
         <div className="flex items-center gap-4">
           <MdHome
+            onClick={() => navigate('/')}
             className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
             size={40}
           />
@@ -29,6 +32,7 @@ export default function Nav() {
         </div>
         <div className="flex items-center gap-4">
           <MdAccountCircle
+            onClick={() => navigate('/about')}
             className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
             size={40}
           />
@@ -38,6 +42,7 @@ export default function Nav() {
         </div>
         <div className="flex items-center gap-4">
           <RxDashboard
+            onClick={() => navigate('/projects')}
             className="peer text-secondary hover:bg-primary p-[8px] rounded-[16px] cursor-pointer"
             size={40}
           />
@@ -47,6 +52,7 @@ export default function Nav() {
         </div>
         <div className="flex items-center gap-4">
           <MdOutlineDashboardCustomize
+            onClick={() => navigate('projects/new')}
             className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
             size={40}
           />
@@ -56,6 +62,7 @@ export default function Nav() {
         </div>
         <div className="flex items-center gap-4">
           <MdEmail
+            onClick={() => navigate('/contact')}
             className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
             size={40}
           />

@@ -8,6 +8,7 @@ import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 import FourOFour from "./Pages/FourOFour";
 
 // COMPONENTS
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Index />} />
           <Route path="/projects/:id" element={<Show />} />
           <Route path="/projects/new" element={<New />} />
