@@ -15,4 +15,25 @@ export default function NewProject() {
         is_favorite: "",
         created_on: ""
     });
+
+    const navigate = useNavigate();
+
+    const handleTextChange = (event) => {
+        setNewProject({ ...newProject, [event.target.id]: event.target.value});
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        axios.post(`${API}/dishes`, newProject)
+            .then(() => {
+                navigate('/dishes');
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    };
+
+    return (
+        <div></div>
+    )
 }

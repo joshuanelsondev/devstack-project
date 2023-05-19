@@ -1,5 +1,9 @@
-
+import NewProject from "../Components/NewProject";
 
 export default function New() {
-  return <div></div>;
+  return (
+    <div>
+      <NewProject />
+    </div>
+  )
 }

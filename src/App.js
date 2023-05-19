@@ -1,5 +1,7 @@
 // DEPENDENCIES
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { useState } from "react";
+
 
 // PAGES
 import Edit from "./Pages/Edit";
@@ -15,10 +17,12 @@ import FourOFour from "./Pages/FourOFour";
 import Nav from "./Components/Nav";
 
 function App() {
+  const [errorPage, setErrorPage] = useState(false);
+
   return (
     <div className="App w-full h-full relative">
       <Router>
-        <Nav />
+       {!errorPage && <Nav />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -27,7 +31,7 @@ function App() {
           <Route path="/projects/:id" element={<Show />} />
           <Route path="/projects/new" element={<New />} />
           <Route path="/projects/:id/edit" element={<Edit />} />
-          <Route path="*" element={<FourOFour />} />
+          <Route path="*" element={<FourOFour errorPage={errorPage} setErrorPage={setErrorPage}/>} />
         </Routes>
       </Router>
     </div>
