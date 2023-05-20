@@ -5,12 +5,11 @@ import miniLogoLight from "../assets/miniLogoLight.png";
 import {
   MdAccountCircle,
   MdHome,
-  MdDashboard,
-  MdOutlineDashboardCustomize,
   MdEmail,
   MdOutlineDarkMode,
   MdOutlineLightMode,
 } from "react-icons/md";
+import { AiOutlineAppstore, AiOutlineAppstoreAdd } from "react-icons/ai";
 
 
 export default function Nav({ homePageLogo }) {
@@ -22,7 +21,7 @@ export default function Nav({ homePageLogo }) {
     };
 
     return (
-      <div className="h-full w-full">
+      <div className="h-full w-full absolute">
         {homePageLogo ? (
           <Link className="absolute right-0" to={"/"}>
             <img
@@ -39,7 +38,7 @@ export default function Nav({ homePageLogo }) {
           <div className="flex items-center gap-4">
             <MdHome
               onClick={() => navigate("/")}
-              className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
+              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -49,7 +48,7 @@ export default function Nav({ homePageLogo }) {
           <div className="flex items-center gap-4">
             <MdAccountCircle
               onClick={() => navigate("/about")}
-              className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
+              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -57,9 +56,9 @@ export default function Nav({ homePageLogo }) {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <MdDashboard
+            <AiOutlineAppstore
               onClick={() => navigate("/projects")}
-              className="peer text-secondary hover:bg-primary p-[8px] rounded-[16px] cursor-pointer"
+              className="peer text-secondary hover:bg-dark p-[8px] rounded-full cursor-pointer"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -67,9 +66,9 @@ export default function Nav({ homePageLogo }) {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <MdOutlineDashboardCustomize
+            <AiOutlineAppstoreAdd
               onClick={() => navigate("projects/new")}
-              className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
+              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -79,7 +78,7 @@ export default function Nav({ homePageLogo }) {
           <div className="flex items-center gap-4">
             <MdEmail
               onClick={() => navigate("/contact")}
-              className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
+              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -92,7 +91,7 @@ export default function Nav({ homePageLogo }) {
               <div className="flex items-center gap-4">
                 <MdOutlineDarkMode
                   onClick={toggleTheme}
-                  className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
+                  className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
                   size={40}
                 />
                 <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -103,7 +102,7 @@ export default function Nav({ homePageLogo }) {
               <div className="flex items-center gap-4">
                 <MdOutlineLightMode
                   onClick={toggleTheme}
-                  className="peer text-secondary hover:bg-primary rounded-[16px] p-2 cursor-pointer"
+                  className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
                   size={40}
                 />
                 <p className="invisible text-secondary font-semibold peer-hover:visible">

@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        image: "url('/src/assets/pursuit_headshot.png')"
+      }
+    },
     colors: {
       dark: "#021d28",
       primary: "#1F7A8C",
