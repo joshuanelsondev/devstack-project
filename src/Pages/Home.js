@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import headshot from "../assets/pursuit_headshot.png";
 import {
   AiFillLinkedin,
   AiOutlineGithub,
-  AiFillGoogleCircle,
   AiFillInstagram,
 } from "react-icons/ai";
-import { SiGmail } from "react-icons/si";
 
 export default function Home() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="h-full w-11/12 flex flex-col">
       <div className="flex justify-end mt-52 gap-20 relative">
@@ -21,37 +22,34 @@ export default function Home() {
           </h1>
           <h2 className="text-3xl mt-2 font-semibold text-dark">Developer</h2>
           <div className="flex mt-4 gap-8 justify-center">
-            <div className="relative flex flex-col items-center">
-              <AiFillLinkedin
-                className="text-blue cursor-pointer hover:text-dark"
-                size={28}
-              />
-              <p className="mt-4 right-0 text-gray bg-dark rounded p-1">
-                LinkedIn
-              </p>
+            <div className="flex flex-col items-center gap-2">
+              <a className="peer" href="https://www.linkedin.com/in/joshuanelsondev" target="_blank" rel="noreferrer">
+                <AiFillLinkedin
+                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  size={40}
+                />
+              </a>
+              <p className="text-blue font-semibold invisible peer-hover:visible">LinkedIn</p>
             </div>
-            <div className="relative flex flex-col items-center">
-              <AiOutlineGithub
-                className="text-blue cursor-pointer hover:text-dark"
-                size={28}
-              />
-              <p className="mt-4 right-0 text-gray bg-dark rounded p-1">
-                GitHub
-              </p>
+
+            <div className="flex flex-col items-center gap-2">
+              <a className="peer" href="https://github.com/joshuanelsondev" target="_blank" rel="noreferrer">
+                <AiOutlineGithub
+                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  size={40}
+                />
+              </a>
+              <p className="text-blue font-semibold invisible peer-hover:visible">GitHub</p>
             </div>
-            <div className="relative flex flex-col items-center">
-              <SiGmail
-                className="text-blue cursor-pointer hover:text-dark"
-                size={28}
-              />
-              <p className=" mt-4  text-gray bg-dark rounded p-1">GMail</p>
-            </div>
-            <div className="relative flex flex-col items-center">
-              <AiFillInstagram
-                className="text-blue cursor-pointer hover:text-dark"
-                size={28}
-              />
-              <p className="mt-4 text-gray bg-dark rounded p-1">
+
+            <div className="flex flex-col items-center gap-2">
+              <a className="peer" href="https://www.instagram.com/joshuanelsonmusic/" target="_blank" rel="noreferrer">
+                <AiFillInstagram
+                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  size={40}
+                />
+              </a>
+              <p className="text-blue font-semibold invisible peer-hover:visible">
                 Instagram
               </p>
             </div>
@@ -60,7 +58,7 @@ export default function Home() {
         <img
           src={headshot}
           alt="headshot"
-          className="bg-gradient-to-r from-blue to-primary  rounded-3xl shadow-lg shadow-blue"
+          className="bg-blend-difference bg-gradient-to-r from-blue to-primary  rounded-3xl shadow-lg shadow-blue"
         />
       </div>
     </div>
