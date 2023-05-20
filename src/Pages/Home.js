@@ -1,14 +1,13 @@
-import { useNavigate } from "react-router-dom";
 import headshot from "../assets/pursuit_headshot.png";
 import {
   AiFillLinkedin,
   AiOutlineGithub,
   AiFillInstagram,
+  AiFillFacebook,
 } from "react-icons/ai";
 
 export default function Home() {
 
-  const navigate = useNavigate();
 
   return (
     <div className="h-full w-11/12 flex flex-col">
@@ -20,30 +19,68 @@ export default function Home() {
           >
             Joshua Nelson
           </h1>
-          <h2 className="text-3xl mt-2 font-semibold text-dark">Developer</h2>
+          <h2 className="text-3xl mt-2 font-semibold text-dark">
+            <span className="text-blue">Full Stack</span> Developer
+          </h2>
           <div className="flex mt-4 gap-8 justify-center">
             <div className="flex flex-col items-center gap-2">
-              <a className="peer" href="https://www.linkedin.com/in/joshuanelsondev" target="_blank" rel="noreferrer">
+              <a
+                className="peer"
+                href="https://www.linkedin.com/in/joshuanelsondev"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillLinkedin
                   className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-blue font-semibold invisible peer-hover:visible">LinkedIn</p>
+              <p className="text-blue font-semibold invisible peer-hover:visible">
+                LinkedIn
+              </p>
             </div>
 
             <div className="flex flex-col items-center gap-2">
-              <a className="peer" href="https://github.com/joshuanelsondev" target="_blank" rel="noreferrer">
+              <a
+                className="peer"
+                href="https://github.com/joshuanelsondev"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiOutlineGithub
                   className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-blue font-semibold invisible peer-hover:visible">GitHub</p>
+              <p className="text-blue font-semibold invisible peer-hover:visible">
+                GitHub
+              </p>
             </div>
 
             <div className="flex flex-col items-center gap-2">
-              <a className="peer" href="https://www.instagram.com/joshuanelsonmusic/" target="_blank" rel="noreferrer">
+              <a
+                className="peer"
+                href="https://www.facebook.com/JoshuaNelsonSax"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillFacebook
+                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  size={40}
+                />
+              </a>
+              <p className="text-blue font-semibold invisible peer-hover:visible">
+                Facebook
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center gap-2">
+              <a
+                className="peer"
+                href="https://www.instagram.com/joshuanelsonmusic/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillInstagram
                   className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
                   size={40}
