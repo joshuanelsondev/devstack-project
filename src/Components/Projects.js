@@ -21,10 +21,10 @@ export default function Projects() {
 
     return (
         <div className="flex flex-col">
-            <h1 className="text-5xl text-blue pl-10 font-semibold">Portfolio</h1>
+            <h1 className="text-5xl text-blue font-semibold">Portfolio</h1>
             {projects ? (projects.map(project => {
                 return (
-                  <div key={project.id} className="flex justify-center pl-20">
+                  <div key={project.id} className="flex justify-start">
                     <Project project={project} />
                   </div>
                 );

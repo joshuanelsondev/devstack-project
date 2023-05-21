@@ -18,14 +18,13 @@ import Nav from "./Components/Nav";
 
 function App() {
   const [errorPage, setErrorPage] = useState(false);
-  const [homePageLogo, setHomePageLogo] = useState(true);
 
   return (
     <div className="App w-full h-full relative">
       <Router>
-       {!errorPage && <Nav homePageLogo={homePageLogo} />}
+       {!errorPage && <Nav />}
         <Routes>
-          <Route path="/" element={<Home homePageLogo={homePageLogo} setHomePageLogo={setHomePageLogo} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Index />} />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import DevStackLogoLight from "../assets/DevStackLogoLight.png";
 import miniLogoLight from "../assets/miniLogoLight.png";
@@ -12,9 +12,10 @@ import {
 import { AiOutlineAppstore, AiOutlineAppstoreAdd } from "react-icons/ai";
 
 
-export default function Nav({ homePageLogo }) {
+export default function Nav() {
     const [darkTheme, setDarkTheme] = useState(true);
     const navigate = useNavigate();
+
 
     const toggleTheme = () => {
         setDarkTheme(!darkTheme);
@@ -22,18 +23,9 @@ export default function Nav({ homePageLogo }) {
 
     return (
       <div className="h-full w-full absolute">
-        {homePageLogo ? (
-          <Link className="absolute right-0" to={"/"}>
-            <img
-              src={DevStackLogoLight}
-              alt="DevStack Logo"
-            />
-          </Link>
-        ) : (
-          <Link to={"/"}>
-            <img src={miniLogoLight} alt="DevStack Logo" />
-          </Link>
-        )}
+        <Link className="absolute right-0 h-auto w-60" to={"/"}>
+          <img src={DevStackLogoLight} alt="DevStack Logo" />
+        </Link>
         <div className="flex flex-col fixed top-[20%] gap-12 ml-10 z-10">
           <div className="flex items-center gap-4">
             <MdHome

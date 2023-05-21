@@ -1,26 +1,11 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import {
   AiFillGithub,
   AiOutlineExport,
 } from "react-icons/ai";
 
-const API = process.env.REACT_APP_API_URL;
 
 export default function Project({ project }) {
-    
-    const navigate = useNavigate();
-
-    const deleteProject = () => {
-        axios.delete(`${API}/project/${project.id}`)
-        .then(() => {
-            navigate('/projects');
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-    };
 
     return (
       <div className="min-h-96 max-w-9/12 min-w-fit mt-20 p-16 gap-4 bg-dark flex flex-col items-start z-10 rounded-3xl hover:shadow-lg hover:shadow-blue">

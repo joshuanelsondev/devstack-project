@@ -15,7 +15,7 @@ export default function Home() {
         <div className="w-96 h-auto mt-20 text-center">
           <h1
             className="text-6xl text-blue font-semibold"
-            style={{ "text-shadow": "3px 3px 3px black" }}
+            style={{ "textShadow": "3px 3px 3px black" }}
           >
             Joshua Nelson
           </h1>
