@@ -6,7 +6,8 @@ import {
 
 
 export default function Project({ project }) {
-
+  
+  
     return (
       <div className="min-h-96 max-w-9/12 min-w-fit mt-20 p-16 gap-4 bg-dark flex flex-col items-start z-10 rounded-3xl hover:shadow-lg hover:shadow-blue">
         <div>

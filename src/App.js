@@ -24,7 +24,7 @@ function App() {
       <Router>
        {!errorPage && <Nav />}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home setErrorPage={setErrorPage} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Index />} />

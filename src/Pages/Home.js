@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import headshot from "../assets/pursuit_headshot.png";
 import {
   AiFillLinkedin,
@@ -6,8 +7,11 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 
-export default function Home() {
+export default function Home({ setErrorPage }) {
 
+  useEffect(() => {
+    setErrorPage(false);
+  }, []);
 
   return (
     <div className="h-full w-11/12 flex flex-col">
