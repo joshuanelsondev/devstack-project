@@ -22,7 +22,10 @@ export default function ProjectDetails() {
             setIsLoading(false);
         })
         .catch((error) => {
-            console.log(error);
+            console.log(error.response.status);
+            if (error.response.status === 404) {
+              navigate('*')
+            }
             setIsLoading(false);
         })
     }, [id]);
