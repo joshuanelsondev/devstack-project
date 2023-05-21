@@ -52,7 +52,7 @@ export default function ProjectDetails() {
     }
 
     return (
-      <div className="flex flex-col gap-10 p-20 bg-gradient-to-r from-dark to-primary rounded-xl  font-semibold">
+      <div className="flex flex-col gap-10 p-20 bg-gradient-to-r from-dark to-primary rounded-xl  font-semibold shadow-xl shadow-primary">
         <h1 className="text-5xl text-blue font-semibold">{project.title}</h1>
         <img src={project.image} alt={project.title} />
         <p className="text-lg text-blue leading-loose">{project.description}</p>
