@@ -1,6 +1,6 @@
 // DEPENDENCIES
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 // PAGES
@@ -19,10 +19,27 @@ import Nav from "./Components/Nav";
 function App() {
   const [errorPage, setErrorPage] = useState(false);
 
+  useEffect(() => {
+    const currentMode = localStorage.getItem("mode");
+    if (currentMode === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  const toggleMode = () => {
+    document.documentElement.classList.toggle("dark");
+    const currentMode = document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
+    localStorage.setItem("mode", currentMode);
+  };
+
   return (
     <div className="App w-full h-full relative">
       <Router>
-       {!errorPage && <Nav />}
+       {!errorPage && <Nav toggleMode={toggleMode} />}
         <Routes>
           <Route path="/" element={<Home setErrorPage={setErrorPage} />} />
           <Route path="/about" element={<About />} />

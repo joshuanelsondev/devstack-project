@@ -12,18 +12,23 @@ import {
 import { AiOutlineAppstore, AiOutlineAppstoreAdd } from "react-icons/ai";
 
 
-export default function Nav() {
-    const [darkTheme, setDarkTheme] = useState(true);
+export default function Nav({ toggleMode }) {
+    const prefersDarkMode = usePrefersDarkMode();
+    const [darkTheme, setDarkTheme] = useState(prefersDarkMode);
     const navigate = useNavigate();
 
+    useEffect(() => {
+      document.documentElement.classList.toggle("dark", darkTheme);
+    }, [darkTheme]);
 
     const toggleTheme = () => {
         setDarkTheme(!darkTheme);
+        toggleMode();
     };
 
     return (
       <div className="h-full w-full absolute">
-        <Link className="absolute right-0 h-auto w-60" to={"/"}>
+        <Link className="absolute right-0 h-auto w-60 z-10" to={"/"}>
           <img src={DevStackLogoLight} alt="DevStack Logo" />
         </Link>
         <div className="flex flex-col fixed top-[20%] gap-12 ml-10 z-10">
