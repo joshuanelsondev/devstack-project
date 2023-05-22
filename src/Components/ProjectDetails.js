@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { MdModeEdit, MdFavorite, MdFavoriteBorder, MdDelete } from "react-icons/md";
+import { MdModeEdit, MdDelete } from "react-icons/md";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 
 const API = process.env.REACT_APP_API_URL;
