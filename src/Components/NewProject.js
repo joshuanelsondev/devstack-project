@@ -188,7 +188,7 @@ export default function NewProject() {
               />
               <button
                 onClick={handleSubmit}
-                className="text-primary font-semibold bg-secondary cursor-pointer p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
+                className="text-primary font-semibold bg-secondary cursor-pointer p-2 rounded-xl w-20 z-30 h-auto hover:bg-dark hover:text-secondary"
               >
                 Save
               </button>
