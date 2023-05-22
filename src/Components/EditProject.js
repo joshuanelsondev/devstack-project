@@ -205,13 +205,13 @@ export default function EditProject() {
             <div className="flex gap-4">
               <button
                 onClick={toggleModal}
-                className="text-primary font-semibold bg-secondary cursor-pointer p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
+                className="text-primary font-semibold bg-secondary cursor-pointer z-30 p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
               >
                 Delete
               </button>
               <button
                 onClick={handleSubmit}
-                className="text-primary font-semibold bg-secondary cursor-pointer p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
+                className="text-primary font-semibold bg-secondary cursor-pointer z-30 p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
               >
                 Save
               </button>
