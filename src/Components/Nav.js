@@ -11,8 +11,31 @@ import {
 } from "react-icons/md";
 import { AiOutlineAppstore, AiOutlineAppstoreAdd } from "react-icons/ai";
 
+const usePrefersDarkMode = () => {
+  const [prefersDarkMode, setPrefersDarkMode] = useState(
+    window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (event) => {
+      setPrefersDarkMode(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  return prefersDarkMode;
+};
 
 export default function Nav({ toggleMode }) {
+    // const [darkTheme, setDarkTheme] = useState(true);
     const prefersDarkMode = usePrefersDarkMode();
     const [darkTheme, setDarkTheme] = useState(prefersDarkMode);
     const navigate = useNavigate();
