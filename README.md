@@ -19,6 +19,7 @@
 
 # Project Overview
 ![screenshot](./src/assets/DevStack-screenshot.png)
+[Trello](https://trello.com/b/e1mm8MHA/devstack) board
 ### Welcome to my portfolio website!
 This platform serves as a showcase for developers to present their
 projects in an organized and professional manner. Developers can keep their portfolio up to date by editing existing projects or adding new ones as they progress in their coding journey. In future versions, users will be able to customize their own themes for their portfolio.
@@ -33,6 +34,7 @@ projects in an organized and professional manner. Developers can keep their port
 - Link to GitHub, LinkedIn, and other social media platforms
 - Share thumbnails of the project
 - Responsive Design
+
 
 
 # Demo
