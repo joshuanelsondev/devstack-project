@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import headshot from "../assets/pursuit_headshot.png";
+
+import headshotCopy from "../assets/headshot-copy.png"
 import {
   AiFillLinkedin,
   AiOutlineGithub,
@@ -15,7 +16,7 @@ export default function Home({ setErrorPage }) {
 
   return (
     <div className="h-full w-11/12 flex flex-col">
-      <div className="flex justify-end mt-52 gap-20 relative">
+      <div className="flex justify-center mt-52 gap-20 relative">
         <div className="w-96 h-auto mt-20 text-center">
           <h1
             className="text-6xl text-blue font-semibold"
@@ -97,9 +98,9 @@ export default function Home({ setErrorPage }) {
           </div>
         </div>
         <img
-          src={headshot}
+          src={headshotCopy}
           alt="headshot"
-          className="bg-blend-difference bg-gradient-to-r from-blue to-primary  rounded-3xl shadow-lg shadow-blue"
+          className="h-screen fixed top-0 right-0 opacity-50"
         />
       </div>
     </div>
