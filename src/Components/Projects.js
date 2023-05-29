@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Project from "./Project";
 import { MdLibraryAdd } from "react-icons/md";
+import { BiLoader } from "react-icons/bi";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -22,12 +23,16 @@ export default function Projects() {
                 setIsLoading(false);
             });
     }, []);
-    console.log("projects:", projects === true);
     return (
       <div className="flex flex-col">
         <h1 className="text-5xl text-blue font-semibold">Portfolio</h1>
         {isLoading ? (
-          <h1>Loading ...</h1>
+          <div className="flex justify-center items-center mt-52 gap-2">
+            <h1 className="text-blue text-3xl">
+              Loading
+            </h1>
+            <BiLoader className="text-blue animate-spin-slow" size={20}/>
+          </div>
         ) : (
           <>
             {projects.map((project) => (

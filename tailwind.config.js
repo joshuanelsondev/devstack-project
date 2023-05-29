@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         image: "url('/src/assets/pursuit_headshot.png')",
       },
+      animation: {
+        "spin-slow": "spin 6s linear infinite",
+      }
     },
     colors: {
       dark: "#021d28",
