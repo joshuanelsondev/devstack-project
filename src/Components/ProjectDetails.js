@@ -52,9 +52,9 @@ export default function ProjectDetails() {
     }
 
     return (
-      <div className="flex flex-col gap-10 p-20 bg-gradient-to-r from-dark to-primary rounded-xl  font-semibold shadow-xl shadow-primary">
+      <div className="flex flex-col gap-10 p-20 bg-dark rounded-xl  font-semibold shadow-xl shadow-primary">
         <h1 className="text-5xl text-blue font-semibold">{project.title}</h1>
-        <img src={project.image} alt={project.title} />
+        <img src={project.image} alt={project.title} className="rounded shadow-lg shadow-primary" />
         <p className="text-lg text-blue leading-loose">{project.description}</p>
         <ul className="flex gap-4">
           {project.tech.map((str, index) => {
@@ -74,7 +74,7 @@ export default function ProjectDetails() {
               rel="noreferrer"
               className="text-blue"
             >
-              <AiFillGithub className="p-2 hover:bg-dark rounded-full" size={40} />
+              <AiFillGithub className="p-2 hover:text-primary rounded-full" size={40} />
             </a>
             <a
               href={project.demo_link}
@@ -82,7 +82,7 @@ export default function ProjectDetails() {
               rel="noreferrer"
               className="text-blue"
             >
-              <AiOutlineExport className="p-2 hover:bg-dark rounded-full" size={40} />
+              <AiOutlineExport className="p-2 hover:text-primary rounded-full" size={40} />
             </a>
           </div>
           <div className="flex items-center relative">
@@ -91,7 +91,7 @@ export default function ProjectDetails() {
               className="text-blue flex flex-col gap-2 items-center"
             >
               <MdModeEdit
-                className="peer hover:bg-dark rounded-full p-2"
+                className="peer hover:text-primary rounded-full p-2"
                 size={40}
               />
               <p className="text-blue font-bold invisible peer-hover:visible absolute top-10">
@@ -103,7 +103,7 @@ export default function ProjectDetails() {
               className="flex flex-col items-center text-blue gap-2"
             >
               <MdDelete
-                className="peer hover:bg-dark rounded-full p-2"
+                className="peer hover:text-primary rounded-full p-2"
                 size={40}
               />
               <p className="text-blue font-bold invisible peer-hover:visible absolute top-10">
