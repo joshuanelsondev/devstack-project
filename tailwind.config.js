@@ -7,7 +7,7 @@ module.exports = {
         image: "url('/src/assets/pursuit_headshot.png')",
       },
       animation: {
-        "spin-slow": "spin 6s linear infinite",
+        "spin-slow": "spin 3s linear infinite",
       }
     },
     colors: {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Project from "./Project";
 import { MdLibraryAdd } from "react-icons/md";
-import { BiLoader } from "react-icons/bi";
+import { RiLoader5Fill } from "react-icons/ri";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -31,7 +31,7 @@ export default function Projects() {
             <h1 className="text-blue text-3xl">
               Loading
             </h1>
-            <BiLoader className="text-blue animate-spin-slow" size={20}/>
+            <RiLoader5Fill className="text-blue animate-spin-slow" size={30}/>
           </div>
         ) : (
           <>
