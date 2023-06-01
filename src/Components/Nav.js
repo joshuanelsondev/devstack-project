@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import DevStackLogoLight from "../assets/DevStackLogoLight.png";
-import miniLogoLight from "../assets/miniLogoLight.png";
+import { AiOutlineMenu } from "react-icons/ai";
+
 import {
   MdAccountCircle,
   MdHome,
@@ -35,9 +36,10 @@ const usePrefersDarkMode = () => {
 };
 
 export default function Nav({ toggleMode }) {
-    // const [darkTheme, setDarkTheme] = useState(true);
+
     const prefersDarkMode = usePrefersDarkMode();
     const [darkTheme, setDarkTheme] = useState(prefersDarkMode);
+    const [showNav, setShowNav] = useState(false)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -45,16 +47,27 @@ export default function Nav({ toggleMode }) {
     }, [darkTheme]);
 
     const toggleTheme = () => {
-        setDarkTheme(!darkTheme);
-        toggleMode();
+      setDarkTheme(!darkTheme);
+      toggleMode();
+    };
+
+    const toggleNav = () => {
+      setShowNav(!showNav);
     };
 
     return (
       <div className="h-full w-full absolute">
-        <Link className="absolute right-0 h-auto w-60 z-10" to={"/"}>
-          <img src={DevStackLogoLight} alt="DevStack Logo" />
+        <Link
+          className="flex w-full justify-center sm:absolute sm:right-0 sm:h-auto sm:w-60 z-10"
+          to={"/"}
+        >
+          <img
+            src={DevStackLogoLight}
+            alt="DevStack Logo"
+            className="w-40 mt-4 sm:w-52"
+          />
         </Link>
-        <div className="flex flex-col fixed top-[20%] gap-12 ml-10 z-10">
+        <div className="hidden md:flex flex-col fixed top-[20%] gap-12 ml-1 sm:ml-4 z-10">
           <div className="flex items-center gap-4">
             <MdHome
               onClick={() => navigate("/")}
@@ -131,6 +144,80 @@ export default function Nav({ toggleMode }) {
               </div>
             )}
           </div>
+        </div>
+
+        <div className="h-full w-10 flex justify-center absolute top-6 left-4">
+          <div className="z-30 md:hidden">
+            <AiOutlineMenu
+              onClick={toggleNav}
+              className="text-blue transition-colors duration-300 ease-in-out transform hover:scale-110"
+              size={20}
+            />
+          </div>
+          {showNav && (
+            <div className="absolute top-6 ml-10 w-fit pr-1 bg-primary bg-opacity-50 rounded transition-transform duration-1000 ease-in-out transform translate-y-4 z-30">
+              <div className="flex items-center gap-1 group">
+                <MdHome
+                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  size={30}
+                />
+                <p
+                  onClick={() => navigate("/")}
+                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                >
+                  Home
+                </p>
+              </div>
+              <div className="flex items-center gap-1 group">
+                <MdAccountCircle
+                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  size={30}
+                />
+                <p
+                  onClick={() => navigate("/about")}
+                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                >
+                  About
+                </p>
+              </div>
+              <div className="flex items-center gap-1 group">
+                <AiOutlineAppstore
+                  className="text-secondary group-hover:text-dark p-[8px] rounded-full cursor-pointer"
+                  size={30}
+                />
+                <p
+                  onClick={() => navigate("/projects")}
+                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                >
+                  Portfolio
+                </p>
+              </div>
+              <div className="flex items-center gap-1 group w-max">
+                <AiOutlineAppstoreAdd
+                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  size={30}
+                />
+                <p
+                  onClick={() => navigate("projects/new")}
+                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                >
+                  Add Project
+                </p>
+              </div>
+              <div className="flex items-center gap-1 group">
+                <MdEmail
+                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  size={30}
+                />
+                <p
+                  onClick={() => navigate("/contact")}
+                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                >
+                  Contact
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );

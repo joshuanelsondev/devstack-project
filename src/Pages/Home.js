@@ -17,7 +17,7 @@ export default function Home({ setErrorPage }) {
   return (
     <div className="h-full w-11/12 flex flex-col">
       <div className="flex justify-center mt-52 gap-20 relative">
-        <div className="w-96 h-auto mt-20 text-center z-20">
+        <div className="w-96 h-auto mt-20 text-center z-20 sm:bg-dark sm:bg-opacity-50 lg:bg-none">
           <h1
             className="text-6xl text-blue font-semibold"
             style={{ "textShadow": "3px 3px 3px black" }}
