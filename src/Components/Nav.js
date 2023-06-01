@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import DevStackLogoLight from "../assets/DevStackLogoLight.png";
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -41,6 +41,7 @@ export default function Nav({ toggleMode }) {
     const [darkTheme, setDarkTheme] = useState(prefersDarkMode);
     const [showNav, setShowNav] = useState(false)
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
       document.documentElement.classList.toggle("dark", darkTheme);
@@ -53,6 +54,10 @@ export default function Nav({ toggleMode }) {
 
     const toggleNav = () => {
       setShowNav(!showNav);
+    };
+
+    const isDarkText = (path) => {
+      return location.pathname === path
     };
 
     return (
@@ -71,7 +76,9 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center gap-4">
             <MdHome
               onClick={() => navigate("/")}
-              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
+              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/") ? "bg-dark" : "text-secondary"
+              }`}
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -81,7 +88,9 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center gap-4">
             <MdAccountCircle
               onClick={() => navigate("/about")}
-              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
+              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/about") ? "bg-dark" : "text-secondary"
+              }`}
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -91,7 +100,9 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center gap-4">
             <AiOutlineAppstore
               onClick={() => navigate("/projects")}
-              className="peer text-secondary hover:bg-dark p-[8px] rounded-full cursor-pointer"
+              className={`peer text-secondary hover:bg-dark p-[8px] rounded-full cursor-pointer ${
+                isDarkText("/projects") ? "bg-dark" : "text-secondary"
+              }`}
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -101,7 +112,9 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center gap-4">
             <AiOutlineAppstoreAdd
               onClick={() => navigate("projects/new")}
-              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
+              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/projects/new") ? "bg-dark" : "text-secondary"
+              }`}
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -111,7 +124,9 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center gap-4">
             <MdEmail
               onClick={() => navigate("/contact")}
-              className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
+              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/contact") ? "bg-dark" : "text-secondary"
+              }`}
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -156,62 +171,82 @@ export default function Nav({ toggleMode }) {
           </div>
           {showNav && (
             <div className="absolute top-6 ml-10 w-fit pr-1 bg-primary bg-opacity-50 rounded transition-transform duration-1000 ease-in-out transform translate-y-4 z-30">
-              <div className="flex items-center gap-1 group">
+              <div
+                className={`flex items-center gap-1 group ${
+                  isDarkText("/") ? "text-dark" : "text-secondary"
+                }`}
+              >
                 <MdHome
-                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/")}
-                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark"
                 >
                   Home
                 </p>
               </div>
-              <div className="flex items-center gap-1 group">
+              <div
+                className={`flex items-center gap-1 group ${
+                  isDarkText("/about") ? "text-dark" : "text-secondary"
+                }`}
+              >
                 <MdAccountCircle
-                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/about")}
-                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark"
                 >
                   About
                 </p>
               </div>
-              <div className="flex items-center gap-1 group">
+              <div
+                className={`flex items-center gap-1 group ${
+                  isDarkText("/projects") ? "text-dark" : "text-secondary"
+                }`}
+              >
                 <AiOutlineAppstore
-                  className="text-secondary group-hover:text-dark p-[8px] rounded-full cursor-pointer"
+                  className="group-hover:text-dark p-[8px] rounded-full cursor-pointer"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/projects")}
-                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark"
                 >
                   Portfolio
                 </p>
               </div>
-              <div className="flex items-center gap-1 group w-max">
+              <div
+                className={`flex items-center gap-1 group w-max ${
+                  isDarkText("/projects/new") ? "text-dark" : "text-secondary"
+                }`}
+              >
                 <AiOutlineAppstoreAdd
-                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("projects/new")}
-                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark"
                 >
                   Add Project
                 </p>
               </div>
-              <div className="flex items-center gap-1 group">
+              <div
+                className={`flex items-center gap-1 group ${
+                  isDarkText("/contact") ? "text-dark" : "text-secondary"
+                }`}
+              >
                 <MdEmail
-                  className="text-secondary group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/contact")}
-                  className="text-secondary text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark"
                 >
                   Contact
                 </p>
