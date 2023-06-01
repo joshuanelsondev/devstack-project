@@ -15,9 +15,9 @@ export default function Home({ setErrorPage }) {
   }, []);
 
   return (
-    <div className="h-full w-11/12 flex flex-col">
+    <div className="h-full w-full flex flex-col">
       <div className="flex justify-center mt-52 gap-20 relative">
-        <div className="w-96 h-auto mt-20 text-center z-20 sm:bg-dark sm:bg-opacity-50 lg:bg-none">
+        <div className="w-96 h-auto mt-20 text-center z-20">
           <h1
             className="text-6xl text-blue font-semibold"
             style={{ "textShadow": "3px 3px 3px black" }}
@@ -100,7 +100,7 @@ export default function Home({ setErrorPage }) {
         <img
           src={headshotCopy}
           alt="headshot"
-          className="h-screen fixed top-0 right-0 opacity-50"
+          className="fixed bottom-0 right-0 opacity-40"
         />
       </div>
     </div>

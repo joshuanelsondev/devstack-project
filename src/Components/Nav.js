@@ -161,8 +161,8 @@ export default function Nav({ toggleMode }) {
           </div>
         </div>
 
-        <div className="h-full w-10 flex justify-center absolute top-6 left-4">
-          <div className="z-30 md:hidden">
+        <div className="h-10 w-10 flex justify-center absolute top-6 left-4">
+          <div className="z-10 md:hidden">
             <AiOutlineMenu
               onClick={toggleNav}
               className="text-blue transition-colors duration-300 ease-in-out transform hover:scale-110"
