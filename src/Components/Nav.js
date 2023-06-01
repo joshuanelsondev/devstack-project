@@ -165,24 +165,24 @@ export default function Nav({ toggleMode }) {
           <div className="z-10 md:hidden">
             <AiOutlineMenu
               onClick={toggleNav}
-              className="text-blue transition-colors duration-300 ease-in-out transform hover:scale-110"
+              className="text-blue transition-colors duration-300 ease-in-out transform hover:scale-110 cursor-pointer"
               size={20}
             />
           </div>
           {showNav && (
-            <div className="absolute top-6 ml-10 w-fit pr-1 bg-primary bg-opacity-50 rounded transition-transform duration-1000 ease-in-out transform translate-y-4 z-30">
+            <div className="absolute top-6 ml-10 w-fit pr-1 bg-primary bg-opacity-50 rounded transition-transform duration-1000 ease-in-out transform translate-y-4 z-30 md:hidden">
               <div
                 className={`flex items-center gap-1 group ${
                   isDarkText("/") ? "text-dark" : "text-secondary"
                 }`}
               >
                 <MdHome
-                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/")}
-                  className="text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark cursor-pointer hover:scale-110"
                 >
                   Home
                 </p>
@@ -193,12 +193,12 @@ export default function Nav({ toggleMode }) {
                 }`}
               >
                 <MdAccountCircle
-                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/about")}
-                  className="text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark cursor-pointer hover:scale-110"
                 >
                   About
                 </p>
@@ -209,12 +209,12 @@ export default function Nav({ toggleMode }) {
                 }`}
               >
                 <AiOutlineAppstore
-                  className="group-hover:text-dark p-[8px] rounded-full cursor-pointer"
+                  className="group-hover:text-dark p-[8px] rounded-full"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/projects")}
-                  className="text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark cursor-pointer hover:scale-110"
                 >
                   Portfolio
                 </p>
@@ -225,12 +225,12 @@ export default function Nav({ toggleMode }) {
                 }`}
               >
                 <AiOutlineAppstoreAdd
-                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("projects/new")}
-                  className="text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark cursor-pointer hover:scale-110"
                 >
                   Add Project
                 </p>
@@ -241,12 +241,12 @@ export default function Nav({ toggleMode }) {
                 }`}
               >
                 <MdEmail
-                  className="group-hover:text-dark rounded-full p-2 cursor-pointer"
+                  className="group-hover:text-dark rounded-full p-2"
                   size={30}
                 />
                 <p
                   onClick={() => navigate("/contact")}
-                  className="text-sm font-semibold group-hover:text-dark"
+                  className="text-sm font-semibold group-hover:text-dark cursor-pointer hover:scale-110"
                 >
                   Contact
                 </p>
