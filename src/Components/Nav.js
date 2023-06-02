@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import DevStackLogoLight from "../assets/DevStackLogoLight.png";
-import { AiOutlineMenu } from "react-icons/ai";
-
 import {
   MdAccountCircle,
   MdHome,
@@ -10,7 +8,11 @@ import {
   MdOutlineDarkMode,
   MdOutlineLightMode,
 } from "react-icons/md";
-import { AiOutlineAppstore, AiOutlineAppstoreAdd } from "react-icons/ai";
+import {
+  AiOutlineAppstore,
+  AiOutlineAppstoreAdd,
+  AiOutlineMenu,
+} from "react-icons/ai";
 
 const usePrefersDarkMode = () => {
   const [prefersDarkMode, setPrefersDarkMode] = useState(
@@ -170,7 +172,7 @@ export default function Nav({ toggleMode }) {
             />
           </div>
           {showNav && (
-            <div className="absolute top-6 ml-10 w-fit pr-1 bg-primary bg-opacity-50 rounded transition-transform duration-1000 ease-in-out transform translate-y-4 z-30 md:hidden">
+            <div className="absolute top-6 ml-10 w-fit pr-1 bg-primary rounded transition-transform duration-1000 ease-in-out transform translate-y-4 z-30 md:hidden">
               <div
                 className={`flex items-center gap-1 group ${
                   isDarkText("/") ? "text-dark" : "text-secondary"
