@@ -22,9 +22,10 @@ export default function Projects() {
                 setIsLoading(false);
             });
     }, []);
+
     return (
-      <div className="flex flex-col">
-        <h1 className="text-5xl text-blue font-semibold">Portfolio</h1>
+      <div className="flex flex-col items-center md:items-start">
+        <h1 className="text-5xl text-blue font-semibold mt-20">Portfolio</h1>
         {isLoading ? (
           <div className="flex justify-center items-center mt-52 gap-2">
             <h1 className="text-blue text-3xl">

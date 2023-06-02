@@ -15,7 +15,7 @@ export default function AboutComponent() {
     };
 
     return (
-      <div className="h-full w-full flex flex-col items-center">
+      <div className="h-full w-full flex flex-col items-center relative">
         <div className="bg-dark p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl mt-20">
           <h1 className="text-primary text-4xl text-center">
             Welcome to my portfolio website!
@@ -50,7 +50,7 @@ export default function AboutComponent() {
             </span>
           </p>
         </div>
-        <div className="flex flex-col items-center relative w-full">
+        <div className="flex flex-col items-center relative w-full h-full">
           <div>
             <h2
               onClick={toggleModal}
@@ -95,7 +95,7 @@ export default function AboutComponent() {
           </div>
 
           {showModal && (
-            <div className="flex flex-col gap-4 bg-dark mt-4 z-20 p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl relative">
+            <div className="flex flex-col gap-4 bg-dark mt-4 p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl absolute top-0 z-10">
               <AiOutlineCloseSquare onClick={toggleModal} className="text-blue cursor-pointer hover:text-primary" size={20}/>
               <h2 className="text-3xl text-primary text-center">
                 Joshua Nelson
@@ -130,8 +130,9 @@ export default function AboutComponent() {
               </p>
             </div>
           )}
-
-          <img src={pursuit_headshot} alt="headshot" />
+          {!showModal && (
+            <img src={pursuit_headshot} alt="headshot" className="mt-4" />
+          )}
         </div>
       </div>
     );

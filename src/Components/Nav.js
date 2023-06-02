@@ -63,18 +63,18 @@ export default function Nav({ toggleMode }) {
     };
 
     return (
-      <div className="h-full w-full absolute">
-        <Link
-          className="flex w-full justify-center sm:absolute sm:right-0 sm:h-auto sm:w-60 z-10"
-          to={"/"}
+      <div className="h-20 w-full absolute z-50">
+        <div
+          className="fixed flex w-full h-auto justify-center bg-gradient-to-r from-primary to-dark md:absolute md:right-0 md:h-auto md:w-60 md:bg-none"
         >
           <img
             src={DevStackLogoLight}
             alt="DevStack Logo"
-            className="w-40 mt-4 sm:w-52"
+            className="w-40 mt-4 sm:w-52 cursor-pointer"
+            onClick={() => navigate("/")}
           />
-        </Link>
-        <div className="hidden md:flex flex-col fixed top-[20%] gap-12 ml-1 sm:ml-4 z-10">
+        </div>
+        <div className="hidden md:flex flex-col fixed top-[20%] gap-12 ml-1 sm:ml-4">
           <div className="flex items-center gap-4">
             <MdHome
               onClick={() => navigate("/")}
@@ -163,7 +163,7 @@ export default function Nav({ toggleMode }) {
           </div>
         </div>
 
-        <div className="h-10 w-10 flex justify-center absolute top-6 left-4">
+        <div className="h-10 w-10 flex justify-center fixed top-6 left-4">
           <div className="z-10 md:hidden">
             <AiOutlineMenu
               onClick={toggleNav}
@@ -172,7 +172,7 @@ export default function Nav({ toggleMode }) {
             />
           </div>
           {showNav && (
-            <div className="absolute top-6 ml-10 w-fit pr-1 bg-primary rounded transition-transform duration-1000 ease-in-out transform translate-y-4 z-30 md:hidden">
+            <div className="fixed top-9 ml-20 w-fit pr-1 z-40 bg-primary transition-transform duration-1000 ease-in-out transform translate-y-4 md:hidden">
               <div
                 className={`flex items-center gap-1 group ${
                   isDarkText("/") ? "text-dark" : "text-secondary"
