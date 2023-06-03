@@ -64,15 +64,15 @@ export default function Nav({ toggleMode }) {
 
     return (
       <div className="h-20 w-full absolute z-50">
-        <div className="fixed flex w-full h-auto justify-center bg-gradient-to-r from-primary to-dark md:absolute md:right-0 md:h-auto md:w-60 md:bg-none">
+        <div className="fixed flex w-full h-auto justify-center bg-gradient-to-r from-primary to-dark lg:absolute lg:right-0 lg:h-auto lg:w-60 lg:bg-none">
           <img
             src={DevStackLogoLight}
             alt="DevStack Logo"
-            className="w-40 mt-4 sm:w-52 cursor-pointer"
+            className="mt-4 w-52 cursor-pointer"
             onClick={() => navigate("/")}
           />
         </div>
-        <div className="hidden md:flex flex-col fixed top-[20%] gap-12 ml-1 sm:ml-4">
+        <div className="hidden lg:flex flex-col fixed top-[20%] gap-12 ml-1 sm:ml-4">
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdHome
               onClick={() => navigate("/")}
@@ -162,7 +162,7 @@ export default function Nav({ toggleMode }) {
         </div>
 
         <div className="h-10 w-10 flex justify-center fixed top-6 left-4">
-          <div className="z-10 md:hidden">
+          <div className="z-10 lg:hidden">
             <AiOutlineMenu
               onClick={toggleNav}
               className="text-blue transition-colors duration-300 ease-in-out transform hover:scale-110 cursor-pointer"

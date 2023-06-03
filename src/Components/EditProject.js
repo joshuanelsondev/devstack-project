@@ -81,8 +81,8 @@ export default function EditProject() {
   };
 
   return (
-    <div className="h-full w-full flex justify-center pb-20">
-      <div className="bg-gradient-to-r from-dark to-primary rounded-xl w-8/12 h-fit mt-24 flex flex-col items-start p-10 pl-20 gap-4 shadow-xl shadow-dark">
+    <div className="h-full w-full flex justify-center  pb-20">
+      <div className="bg-gradient-to-r from-dark  rounded-xl w-full h-fit mt-24 flex flex-col items-start p-10  gap-4 shadow-xl shadow-dark">
         <h1 className="text-blue text-4xl font-bold">Add a Project</h1>
         {errorMessage && <p className="text-red">{errorMessage}</p>}
         <div className="flex">
@@ -195,28 +195,28 @@ export default function EditProject() {
                 className="cursor-pointer"
               />
             </div>
-          </form>
-          <div className="flex flex-col items-end justify-between">
-            <img
-              src={projectCartoon}
-              alt="Cartoon of people constructing a project"
-              className="w-full h-auto"
-            />
-            <div className="flex gap-4">
-              <button
-                onClick={toggleModal}
-                className="text-primary font-semibold bg-secondary cursor-pointer z-30 p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
-              >
-                Delete
-              </button>
-              <button
-                onClick={handleSubmit}
-                className="text-primary font-semibold bg-secondary cursor-pointer z-30 p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
-              >
-                Save
-              </button>
+            <div className="flex flex-col items-end justify-between">
+              {/* <img
+                src={projectCartoon}
+                alt="Cartoon of people constructing a project"
+                className="w-full h-auto"
+              /> */}
+              <div className="flex gap-4">
+                <button
+                  onClick={toggleModal}
+                  className="text-primary font-semibold bg-secondary cursor-pointer z-30 p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
+                >
+                  Delete
+                </button>
+                <button
+                  onClick={handleSubmit}
+                  className="text-primary font-semibold bg-secondary cursor-pointer z-30 p-2 rounded-xl w-20 h-auto hover:bg-dark hover:text-secondary"
+                >
+                  Save
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       {showModal && (
