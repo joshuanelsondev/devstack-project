@@ -64,9 +64,7 @@ export default function Nav({ toggleMode }) {
 
     return (
       <div className="h-20 w-full absolute z-50">
-        <div
-          className="fixed flex w-full h-auto justify-center bg-gradient-to-r from-primary to-dark md:absolute md:right-0 md:h-auto md:w-60 md:bg-none"
-        >
+        <div className="fixed flex w-full h-auto justify-center bg-gradient-to-r from-primary to-dark md:absolute md:right-0 md:h-auto md:w-60 md:bg-none">
           <img
             src={DevStackLogoLight}
             alt="DevStack Logo"
@@ -75,7 +73,7 @@ export default function Nav({ toggleMode }) {
           />
         </div>
         <div className="hidden md:flex flex-col fixed top-[20%] gap-12 ml-1 sm:ml-4">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center lg:gap-4 md:gap-1">
             <MdHome
               onClick={() => navigate("/")}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
@@ -87,7 +85,7 @@ export default function Nav({ toggleMode }) {
               Home
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center lg:gap-4 md:gap-1">
             <MdAccountCircle
               onClick={() => navigate("/about")}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
@@ -99,7 +97,7 @@ export default function Nav({ toggleMode }) {
               About
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstore
               onClick={() => navigate("/projects")}
               className={`peer text-secondary hover:bg-dark p-[8px] rounded-full cursor-pointer ${
@@ -111,7 +109,7 @@ export default function Nav({ toggleMode }) {
               Portfolio
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstoreAdd
               onClick={() => navigate("projects/new")}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
@@ -123,7 +121,7 @@ export default function Nav({ toggleMode }) {
               Add Project
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center lg:gap-4 md:gap-1">
             <MdEmail
               onClick={() => navigate("/contact")}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
@@ -138,7 +136,7 @@ export default function Nav({ toggleMode }) {
 
           <div>
             {darkTheme ? (
-              <div className="flex items-center gap-4">
+              <div className="flex items-center lg:gap-4 md:gap-1">
                 <MdOutlineDarkMode
                   onClick={toggleTheme}
                   className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
@@ -149,7 +147,7 @@ export default function Nav({ toggleMode }) {
                 </p>
               </div>
             ) : (
-              <div className="flex items-center gap-4">
+              <div className="flex items-center lg:gap-4 md:gap-1">
                 <MdOutlineLightMode
                   onClick={toggleTheme}
                   className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"

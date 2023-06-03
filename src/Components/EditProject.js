@@ -220,8 +220,8 @@ export default function EditProject() {
         </div>
       </div>
       {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-dark bg-opacity-50 z-20">
-          <div className="bg-dark h-40 w-2/5 rounded-xl flex flex-col items-center justify-center gap-4">
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-transparent z-20">
+          <div className="bg-dark h-40 w-96 rounded-xl flex flex-col items-center justify-center gap-4">
             <p className="text-blue text-lg font-bold">
               Are you sure you want to delete this project?
             </p>
