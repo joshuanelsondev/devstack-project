@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import DevStackLogoLight from "../assets/DevStackLogoLight.png";
 import {
   MdAccountCircle,
@@ -54,8 +54,9 @@ export default function Nav({ toggleMode }) {
       toggleMode();
     };
 
-    const toggleNav = () => {
+    const toggleNav = (event) => {
       setShowNav(!showNav);
+      navigate(`${event.target.id}`)
     };
 
     const isDarkText = (path) => {
@@ -69,16 +70,17 @@ export default function Nav({ toggleMode }) {
             src={DevStackLogoLight}
             alt="DevStack Logo"
             className="mt-4 w-52 cursor-pointer"
-            onClick={() => navigate("/")}
+            onClick={toggleNav}
           />
         </div>
         <div className="hidden lg:flex flex-col fixed top-[20%] gap-12 ml-1 sm:ml-4">
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdHome
-              onClick={() => navigate("/")}
+              onClick={toggleNav}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
                 isDarkText("/") ? "bg-dark" : "text-secondary"
               }`}
+              id="/"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -87,10 +89,11 @@ export default function Nav({ toggleMode }) {
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdAccountCircle
-              onClick={() => navigate("/about")}
+              onClick={toggleNav}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
                 isDarkText("/about") ? "bg-dark" : "text-secondary"
               }`}
+              id="/about"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -99,10 +102,11 @@ export default function Nav({ toggleMode }) {
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstore
-              onClick={() => navigate("/projects")}
+              onClick={toggleNav}
               className={`peer text-secondary hover:bg-dark p-[8px] rounded-full cursor-pointer ${
                 isDarkText("/projects") ? "bg-dark" : "text-secondary"
               }`}
+              id="/projects"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -111,10 +115,11 @@ export default function Nav({ toggleMode }) {
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstoreAdd
-              onClick={() => navigate("projects/new")}
+              onClick={toggleNav}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
                 isDarkText("/projects/new") ? "bg-dark" : "text-secondary"
               }`}
+              id="/projects/new"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">
@@ -123,10 +128,11 @@ export default function Nav({ toggleMode }) {
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdEmail
-              onClick={() => navigate("/contact")}
+              onClick={toggleNav}
               className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
                 isDarkText("/contact") ? "bg-dark" : "text-secondary"
               }`}
+              id="contact"
               size={40}
             />
             <p className="invisible text-secondary font-semibold peer-hover:visible">

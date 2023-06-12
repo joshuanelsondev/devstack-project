@@ -1,5 +1,9 @@
 import EditProject from "../Components/EditProject";
 
 export default function Edit() {
-  return <div className="w-8/12"><EditProject /></div>;
+  return (
+    <div className="h-full w-full">
+      <EditProject />
+    </div>
+  );
 }
