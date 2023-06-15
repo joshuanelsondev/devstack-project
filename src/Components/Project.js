@@ -9,7 +9,7 @@ export default function Project({ project }) {
   
   
     return (
-      <div className="min-h-96 w-full mt-10 p-8 gap-4 bg-dark flex flex-col items-start z-10 rounded-3xl hover:shadow-lg hover:shadow-blue">
+      <div className="min-h-96 w-full mt-10 p-8 gap-4 bg-dark dark:primary flex flex-col items-start z-10 rounded-3xl hover:shadow-lg hover:shadow-blue">
         <div>
           <div className="flex gap-4">
             <a href={project.github_link} target="_blank" rel="noreferrer" className="text-blue hover:text-primary">

@@ -73,7 +73,8 @@ export default function EditProject() {
       });
   };
 
-  const toggleModal = () => {
+  const toggleModal = (event) => {
+    event.preventDefault()
     setShowModal(!showModal);
   };
 

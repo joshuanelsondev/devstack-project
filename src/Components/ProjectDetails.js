@@ -64,7 +64,7 @@ export default function ProjectDetails() {
           <img
             src={project.image}
             alt={project.title}
-            className="rounded shadow-lg shadow-primary"
+            className="rounded shadow-lg shadow-primary w-full h-auto"
           />
         </a>
         <p className="text-lg text-blue leading-loose">{project.description}</p>
