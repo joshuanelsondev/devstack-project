@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import headshotCopy from "../assets/headshot-copy.png"
+import headshotCopy from "../assets/headshot-copy.png";
 import {
   AiFillLinkedin,
   AiOutlineGithub,
@@ -9,7 +9,6 @@ import {
 } from "react-icons/ai";
 
 export default function Home({ setErrorPage }) {
-
   useEffect(() => {
     setErrorPage(false);
   }, []);
@@ -19,8 +18,7 @@ export default function Home({ setErrorPage }) {
       <div className="flex justify-center mt-52 gap-20 relative">
         <div className="w-96 h-auto mt-20 text-center z-20">
           <h1
-            className="text-6xl text-blue font-semibold"
-            style={{ "textShadow": "3px 3px 3px black" }}
+            className="text-6xl font-semibold text-shadow"
           >
             Joshua Nelson
           </h1>

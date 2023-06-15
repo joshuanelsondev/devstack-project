@@ -37,18 +37,26 @@ function App() {
   };
 
   return (
-    <div className="App w-full h-full relative">
+    <div className="App w-full h-full relative bg-gray text-dark dark:text-blue dark:bg-gradient-to-b from-dark from-0% via-primary via-50% to-dark">
       <Router>
-       {!errorPage && <Nav toggleMode={toggleMode} />}
+        {!errorPage && <Nav toggleMode={toggleMode} />}
         <Routes>
           <Route path="/" element={<Home setErrorPage={setErrorPage} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Index setErrorPage={setErrorPage} />} />
+          <Route
+            path="/projects"
+            element={<Index setErrorPage={setErrorPage} />}
+          />
           <Route path="/projects/:id" element={<Show />} />
           <Route path="/projects/new" element={<New />} />
           <Route path="/projects/:id/edit" element={<Edit />} />
-          <Route path="*" element={<FourOFour errorPage={errorPage} setErrorPage={setErrorPage}/>} />
+          <Route
+            path="*"
+            element={
+              <FourOFour errorPage={errorPage} setErrorPage={setErrorPage} />
+            }
+          />
         </Routes>
       </Router>
     </div>

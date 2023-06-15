@@ -8,7 +8,7 @@ module.exports = {
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
-      }
+      },
     },
     colors: {
       dark: "#021d28",
@@ -23,12 +23,12 @@ module.exports = {
         text: "#021d28",
         // Add more light mode colors
       },
-      dark_mode: {
-        background: "#021d28",
-        text: "#BFDBF7",
-        // Add more dark mode colors
-      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("tailwindcss-dark-mode"),
+  ],
+  darkMode: "class",
 };

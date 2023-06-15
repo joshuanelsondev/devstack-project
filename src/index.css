@@ -4,8 +4,8 @@
 
 
 html, body, #root {
-  @apply bg-gradient-to-b from-dark from-0% via-primary via-50%;
-  @apply bg-dark bg-fixed;
+  /* @apply bg-gradient-to-b from-dark from-0% via-primary via-50%;
+  @apply bg-dark bg-fixed; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -22,4 +22,12 @@ html, body, #root {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.text-shadow{
+  text-shadow: 3px 3px 3px #1F7A8C;
+}
+
+.dark .text-shadow {
+  text-shadow: 3px 3px 3px #021d28;
 }

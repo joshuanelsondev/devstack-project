@@ -58,7 +58,7 @@ export default function ProjectDetails() {
     }
 
     return (
-      <div className="flex flex-col gap-10 p-10 bg-dark rounded-xl font-semibold shadow-xl shadow-primary">
+      <div className="flex flex-col gap-10 p-10 bg-primary dark:bg-dark rounded-xl font-semibold shadow-xl shadow-primary">
         <h1 className="text-5xl text-blue font-semibold">{project.title}</h1>
         <a href={project.image} target="_blank" rel="noreferrer">
           <img
