@@ -44,7 +44,7 @@ function App() {
           <Route path="/" element={<Home setErrorPage={setErrorPage} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Index />} />
+          <Route path="/projects" element={<Index setErrorPage={setErrorPage} />} />
           <Route path="/projects/:id" element={<Show />} />
           <Route path="/projects/new" element={<New />} />
           <Route path="/projects/:id/edit" element={<Edit />} />

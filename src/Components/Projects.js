@@ -7,11 +7,12 @@ import { RiLoader5Fill } from "react-icons/ri";
 
 const API = process.env.REACT_APP_API_URL;
 
-export default function Projects() {
+export default function Projects({setErrorPage}) {
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        setErrorPage(false);
         axios.get(`${API}/projects`)
             .then((res) => {
                 setProjects(res.data);

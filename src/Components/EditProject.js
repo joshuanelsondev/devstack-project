@@ -25,7 +25,6 @@ export default function EditProject() {
     axios
       .get(`${API}/projects/${id}`)
       .then((res) => {
-        console.log(res.data);
         setEditProject(res.data);
       })
       .catch((error) => {
