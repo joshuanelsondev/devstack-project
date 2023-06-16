@@ -38,7 +38,7 @@ export default function Home({ setErrorPage }) {
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
+              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
                 LinkedIn
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function Home({ setErrorPage }) {
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
+              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
                 GitHub
               </p>
             </div>
@@ -72,7 +72,7 @@ export default function Home({ setErrorPage }) {
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
+              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
                 Facebook
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function Home({ setErrorPage }) {
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
+              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
                 Instagram
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function Home({ setErrorPage }) {
         <img
           src={headshotCopy}
           alt="headshot"
-          className="fixed bottom-0 right-0 opacity-40"
+          className="fixed bottom-0 right-0 opacity-70 dark:opacity-40 xl:h-[1000px] xl:w-[800px]"
         />
       </div>
     </div>

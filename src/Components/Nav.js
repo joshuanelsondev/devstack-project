@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import DevStackLogoLight from "../assets/DevStackLogoLight.png";
+import DevStackLogoBlue from "../assets/DevStackLogoBlue.png";
 import {
   MdAccountCircle,
   MdHome,
@@ -72,7 +73,7 @@ export default function Nav({ toggleMode }) {
       <div className="h-20 w-full absolute z-50">
         <div className="fixed flex w-full h-auto justify-center bg-gradient-to-r from-primary to-dark lg:absolute lg:right-0 lg:h-auto lg:w-60 lg:bg-none">
           <img
-            src={DevStackLogoLight}
+            src={darkTheme ? DevStackLogoLight : DevStackLogoBlue}
             alt="DevStack Logo"
             className="mt-4 w-52 cursor-pointer"
             onClick={() => navigate("/")}
@@ -82,13 +83,13 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdHome
               onClick={() => navigate("/")}
-              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
-                isDarkText("/") ? "bg-dark" : "text-secondary"
-              }`}
+              className={`peer text-dark hover:bg-primary dark:text-secondary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/") ? "bg-primary" : "text-dark"
+              } dark:${isDarkText("/") ? "bg-dark" : "text-secondary"}`}
               size={40}
             />
             <p
-              className="invisible text-secondary font-semibold peer-hover:visible"
+              className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible"
               onClick={() => toggleNav()}
             >
               Home
@@ -97,48 +98,52 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdAccountCircle
               onClick={() => navigate("/about")}
-              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
-                isDarkText("/about") ? "bg-dark" : "text-secondary"
-              }`}
+              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/about") ? "bg-primary" : "text-dark"
+              }  dark:${isDarkText("/about") ? "bg-dark" : "text-secondary"}`}
               size={40}
             />
-            <p className="invisible text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
               About
             </p>
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstore
               onClick={() => navigate("/projects")}
-              className={`peer text-secondary hover:bg-dark p-[8px] rounded-full cursor-pointer ${
+              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark p-[8px] rounded-full cursor-pointer ${
+                isDarkText("/projects") ? "bg-primary" : "text-dark"
+              }  dark:${
                 isDarkText("/projects") ? "bg-dark" : "text-secondary"
               }`}
               size={40}
             />
-            <p className="invisible text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
               Portfolio
             </p>
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstoreAdd
               onClick={() => navigate("projects/new")}
-              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
+              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/projects/new") ? "bg-primary" : "text-dark"
+              }  dark:${
                 isDarkText("/projects/new") ? "bg-dark" : "text-secondary"
               }`}
               size={40}
             />
-            <p className="invisible text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
               Add Project
             </p>
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdEmail
               onClick={() => navigate("/contact")}
-              className={`peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer ${
-                isDarkText("/contact") ? "bg-dark" : "text-secondary"
-              }`}
+              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                isDarkText("/contact") ? "bg-primary" : "text-dark"
+              }  dark:${isDarkText("/contact") ? "bg-dark" : "text-secondary"}`}
               size={40}
             />
-            <p className="invisible text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
               Contact
             </p>
           </div>
@@ -159,10 +164,10 @@ export default function Nav({ toggleMode }) {
               <div className="flex items-center lg:gap-4 md:gap-1">
                 <MdOutlineLightMode
                   onClick={toggleTheme}
-                  className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
+                  className="peer text-dark hover:bg-primary rounded-full p-2 cursor-pointer"
                   size={40}
                 />
-                <p className="invisible text-secondary font-semibold peer-hover:visible">
+                <p className="invisible text-dark font-semibold peer-hover:visible">
                   Light
                 </p>
               </div>
