@@ -22,8 +22,8 @@ export default function Home({ setErrorPage }) {
           >
             Joshua Nelson
           </h1>
-          <h2 className="text-3xl mt-2 font-semibold text-dark">
-            <span className="text-blue">Full Stack</span> Developer
+          <h2 className="text-3xl mt-2 font-semibold text-primary dark:text-dark">
+            <span className="text-dark dark:text-blue">Full Stack</span> Developer
           </h2>
           <div className="flex mt-4 gap-8 justify-center">
             <div className="flex flex-col items-center gap-2">
@@ -34,11 +34,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillLinkedin
-                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  className="p-2 text-dark dark:text-blue cursor-pointer hover:bg-primary dark:hover:bg-dark rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
                 LinkedIn
               </p>
             </div>
@@ -51,11 +51,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiOutlineGithub
-                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  className="p-2 text-dark hover:bg-primary dark:text-blue cursor-pointer dark:hover:bg-dark rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
                 GitHub
               </p>
             </div>
@@ -68,11 +68,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillFacebook
-                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  className="p-2 text-dark dark:text-blue cursor-pointer hover:bg-primary dark:hover:bg-dark rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
                 Facebook
               </p>
             </div>
@@ -85,11 +85,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillInstagram
-                  className="p-2 text-blue cursor-pointer hover:bg-dark rounded-full"
+                  className="p-2 text-dark dark:text-blue cursor-pointer hover:bg-primary dark:hover:bg-dark rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-dark font-semibold invisible peer-hover:visible">
                 Instagram
               </p>
             </div>
