@@ -261,7 +261,7 @@ export default function Nav({ toggleMode }) {
               </div>
               <div className="relative">
                 <div
-                  className={`invisible dark:visible flex items-center gap-1 group cursor-pointer text-dark absolute`}
+                  className={`invisible dark:visible flex items-center gap-1 group hover:text-dark cursor-pointer absolute`}
                 >
                   <MdOutlineDarkMode
                     onClick={toggleTheme}
@@ -276,7 +276,7 @@ export default function Nav({ toggleMode }) {
                   </p>
                 </div>
                 <div
-                  className={`dark:invisible flex items-center gap-1 group cursor-pointer text-secondary`}
+                  className={`dark:invisible flex items-center gap-1 group cursor-pointer hover:text-dark text-secondary`}
                 >
                   <MdOutlineLightMode
                     onClick={toggleTheme}
@@ -284,7 +284,7 @@ export default function Nav({ toggleMode }) {
                     size={30}
                   />
                   <p
-                    className="text-sm font-semibold hover:scale-110 group-hover:scale-110"
+                    className="text-sm font-semibold hover:scale-110 group-hover: group-hover:scale-110"
                     onClick={toggleTheme}
                   >
                     Light

@@ -16,12 +16,12 @@ export default function AboutComponent() {
 
     return (
       <div className="h-full w-full flex flex-col items-center relative">
-        <div className="bg-dark p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl mt-20">
-          <h1 className="text-primary text-4xl text-center">
+        <div className="bg-secondary dark:bg-dark p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl mt-20">
+          <h1 className="text-primary dark:text-primary text-4xl text-center">
             Welcome to my portfolio website!
           </h1>
           <br />
-          <p className="text-blue text-md">
+          <p className="text-dark dark:text-blue text-md">
             This platform serves as a showcase for developers to present their
             projects in an organized and professional manner. Whether you're a
             seasoned developer or just starting out, this portfolio website
@@ -54,7 +54,7 @@ export default function AboutComponent() {
           <div>
             <h2
               onClick={toggleModal}
-              className="text-dark dark:text-blue text-3xl mt-10 cursor-pointer hover:text-primary hover:dark:text-dark"
+              className="text-primary dark:text-blue text-3xl mt-10 cursor-pointer hover:text-dark hover:dark:text-dark"
             >
               About the Developer
             </h2>
@@ -65,7 +65,7 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <AiFillLinkedin
-                  className="cursor-pointer text-dark dark:text-blue hover:text-primary hover:dark:text-dark"
+                  className="cursor-pointer text-primary dark:text-blue hover:text-dark hover:dark:text-dark"
                   size={24}
                 />
               </a>
@@ -76,7 +76,7 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <AiOutlineGithub
-                  className="cursor-pointer text-dark dark:text-blue hover:text-primary hover:dark:text-dark"
+                  className="cursor-pointer text-primary dark:text-blue hover:text-dark hover:dark:text-dark"
                   size={24}
                 />
               </a>
@@ -87,7 +87,7 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <AiOutlineSolution
-                  className="cursor-pointer text-dark dark:text-blue hover:text-primary hover:dark:text-dark"
+                  className="cursor-pointer text-primary dark:text-blue hover:text-dark hover:dark:text-dark"
                   size={24}
                 />
               </a>
@@ -95,12 +95,12 @@ export default function AboutComponent() {
           </div>
 
           {showModal && (
-            <div className="flex flex-col gap-4 bg-dark mt-4 p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl absolute top-0 z-10">
-              <AiOutlineCloseSquare onClick={toggleModal} className="text-blue cursor-pointer hover:text-primary" size={20}/>
+            <div className="flex flex-col gap-4 bg-secondary dark:bg-dark mt-4 p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl absolute top-0 z-10">
+              <AiOutlineCloseSquare onClick={toggleModal} className="text-dark dark:text-blue cursor-pointer hover:text-primary hover:dark:text-primary" size={20}/>
               <h2 className="text-3xl text-primary text-center">
                 Joshua Nelson
               </h2>
-              <p className="text-blue text-md whitespace-break-spaces">
+              <p className="text-dark dark:text-blue text-md whitespace-break-spaces">
                 I am a full stack web developer fellow at Pursuit, an intensive
                 12-month software engineering fellowship with a 9% acceptance
                 rate. My journey in software engineering is driven by a deep
@@ -131,7 +131,7 @@ export default function AboutComponent() {
             </div>
           )}
           {!showModal && (
-            <img src={pursuit_headshot} alt="headshot" className="mt-4" />
+            <img src={pursuit_headshot} alt="headshot" className="mt-4 relative bottom-0 lg:absolute " />
           )}
         </div>
       </div>
