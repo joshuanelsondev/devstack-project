@@ -71,9 +71,17 @@ export default function Nav({ toggleMode }) {
 
     return (
       <div className="h-20 w-full absolute z-50">
-        <div className="fixed flex w-full h-auto justify-center bg-gradient-to-r from-primary to-dark lg:absolute lg:right-0 lg:h-auto lg:w-60 lg:bg-none">
+        <div className="dark:invisible fixed flex w-full h-auto justify-center bg-secondary via-blue lg:absolute lg:right-0 lg:h-auto lg:w-60 lg:bg-none">
           <img
-            src={darkTheme ? DevStackLogoLight : DevStackLogoBlue}
+            src={DevStackLogoBlue}
+            alt="DevStack Logo"
+            className="mt-4 w-52 cursor-pointer"
+            onClick={() => navigate("/")}
+          />
+        </div>
+        <div className="invisible dark:visible fixed flex w-full h-auto justify-center dark:bg-gradient-to-r from-primary to-dark lg:absolute lg:right-0 lg:h-auto lg:w-60 lg:bg-none">
+          <img
+            src={DevStackLogoLight}
             alt="DevStack Logo"
             className="mt-4 w-52 cursor-pointer"
             onClick={() => navigate("/")}
@@ -179,12 +187,12 @@ export default function Nav({ toggleMode }) {
           <div className="z-10 lg:hidden">
             <AiOutlineMenu
               onClick={toggleNav}
-              className="text-blue transition-colors duration-300 ease-in-out transform hover:scale-110 cursor-pointer"
+              className="text-primary dark:text-secondary transition-colors duration-300 ease-in-out transform hover:scale-110 cursor-pointer"
               size={20}
             />
           </div>
           {showNav && (
-            <div className="fixed top-9 ml-20 w-fit pr-1 z-40 bg-primary transition-transform duration-1000 ease-in-out transform translate-y-4 lg:hidden">
+            <div className="fixed top-9 ml-20 w-fit pr-1 z-40 h-fit bg-primary transition-transform duration-1000 ease-in-out transform translate-y-4 lg:hidden">
               <div
                 className={`flex items-center gap-1 group cursor-pointer ${
                   isDarkText("/") ? "text-dark" : "text-secondary"
@@ -255,40 +263,37 @@ export default function Nav({ toggleMode }) {
                   Contact
                 </p>
               </div>
-              <div>
-                {darkTheme ? (
-                  <div
-                    className={`flex items-center gap-1 group cursor-pointer text-dark`}
+              <div className="relative">
+                <div
+                  className={`invisible dark:visible flex items-center gap-1 group cursor-pointer text-dark absolute`}
+                >
+                  <MdOutlineDarkMode
+                    onClick={toggleTheme}
+                    className="rounded-full p-2 group-hover:scale-110"
+                    size={30}
+                  />
+                  <p
+                    className="text-sm font-semibold hover:scale-110 group-hover:scale-110"
+                    onClick={toggleTheme}
                   >
-                    <MdOutlineDarkMode
-                      onClick={toggleTheme}
-                      className="rounded-full p-2 group-hover:scale-110"
-                      size={30}
-                    />
-                    <p
-                      className="text-sm font-semibold hover:scale-110 group-hover:scale-110"
-                      onClick={toggleTheme}
-                    >
-                      Dark
-                    </p>
-                  </div>
-                ) : (
-                  <div
-                    className={`flex items-center gap-1 group cursor-pointer text-secondary`}
+                    Dark
+                  </p>
+                </div>
+                <div
+                  className={`dark:invisible flex items-center gap-1 group cursor-pointer text-secondary`}
+                >
+                  <MdOutlineLightMode
+                    onClick={toggleTheme}
+                    className="rounded-full p-2 group-hover:scale-110"
+                    size={30}
+                  />
+                  <p
+                    className="text-sm font-semibold hover:scale-110 group-hover:scale-110"
+                    onClick={toggleTheme}
                   >
-                    <MdOutlineLightMode
-                      onClick={toggleTheme}
-                      className="rounded-full p-2 group-hover:scale-110"
-                      size={30}
-                    />
-                    <p
-                      className="text-sm font-semibold hover:scale-110 group-hover:scale-110"
-                      onClick={toggleTheme}
-                    >
-                      Light
-                    </p>
-                  </div>
-                )}
+                    Light
+                  </p>
+                </div>
               </div>
             </div>
           )}
