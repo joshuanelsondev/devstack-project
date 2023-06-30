@@ -41,7 +41,7 @@ const usePrefersDarkMode = () => {
 export default function Nav({ toggleMode }) {
 
     const prefersDarkMode = usePrefersDarkMode();
-    const [darkTheme, setDarkTheme] = useState(prefersDarkMode);
+    const [darkTheme, setDarkTheme] = useState(prefersDarkMode);  
     const [showNav, setShowNav] = useState(false)
     const navigate = useNavigate();
     const location = useLocation();
@@ -51,7 +51,6 @@ export default function Nav({ toggleMode }) {
     }, [darkTheme]);
 
     const toggleTheme = () => {
-      setDarkTheme(!darkTheme);
       toggleMode();
     };
 
@@ -71,7 +70,7 @@ export default function Nav({ toggleMode }) {
 
     return (
       <div className="h-20 w-full absolute z-50">
-        <div className="dark:invisible fixed flex w-full h-auto justify-center bg-secondary via-blue lg:absolute lg:right-0 lg:h-auto lg:w-60 lg:bg-none">
+        <div className="dark:invisible fixed flex w-full h-auto justify-center bg-secondary lg:bg-gray lg:absolute lg:right-0 lg:h-auto lg:w-60">
           <img
             src={DevStackLogoBlue}
             alt="DevStack Logo"
@@ -79,7 +78,7 @@ export default function Nav({ toggleMode }) {
             onClick={() => navigate("/")}
           />
         </div>
-        <div className="invisible dark:visible fixed flex w-full h-auto justify-center dark:bg-gradient-to-r from-primary to-dark lg:absolute lg:right-0 lg:h-auto lg:w-60 lg:bg-none">
+        <div className="invisible dark:visible fixed flex w-full h-auto justify-center dark:bg-gradient-to-r from-primary to-dark dark:lg:bg-none  lg:absolute lg:right-0 lg:h-auto lg:w-60">
           <img
             src={DevStackLogoLight}
             alt="DevStack Logo"
@@ -156,9 +155,8 @@ export default function Nav({ toggleMode }) {
             </p>
           </div>
 
-          <div>
-            {darkTheme ? (
-              <div className="flex items-center lg:gap-4 md:gap-1">
+          <div className="relative">
+              <div className="absolute invisible dark:visible flex items-center lg:gap-4 md:gap-1">
                 <MdOutlineDarkMode
                   onClick={toggleTheme}
                   className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
@@ -168,8 +166,7 @@ export default function Nav({ toggleMode }) {
                   Dark
                 </p>
               </div>
-            ) : (
-              <div className="flex items-center lg:gap-4 md:gap-1">
+              <div className="absolute dark:invisible flex items-center lg:gap-4 md:gap-1">
                 <MdOutlineLightMode
                   onClick={toggleTheme}
                   className="peer text-dark hover:bg-primary rounded-full p-2 cursor-pointer"
@@ -179,7 +176,6 @@ export default function Nav({ toggleMode }) {
                   Light
                 </p>
               </div>
-            )}
           </div>
         </div>
 
