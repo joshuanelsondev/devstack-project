@@ -19,7 +19,7 @@ module.exports = {
       white: "#FFFFFF",
       red: "#E73B3B",
       light: {
-        background: "##D1E3DD",
+        background: "#D1E3DD",
         text: "#021d28",
         // Add more light mode colors
       },

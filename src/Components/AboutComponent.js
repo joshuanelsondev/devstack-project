@@ -54,7 +54,7 @@ export default function AboutComponent() {
           <div>
             <h2
               onClick={toggleModal}
-              className="text-blue text-3xl mt-10 cursor-pointer hover:text-dark"
+              className="text-dark dark:text-blue text-3xl mt-10 cursor-pointer hover:text-primary hover:dark:text-dark"
             >
               About the Developer
             </h2>
@@ -65,7 +65,7 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <AiFillLinkedin
-                  className="cursor-pointer hover:text-dark"
+                  className="cursor-pointer text-dark dark:text-blue hover:text-primary hover:dark:text-dark"
                   size={24}
                 />
               </a>
@@ -76,7 +76,7 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <AiOutlineGithub
-                  className="cursor-pointer hover:text-dark"
+                  className="cursor-pointer text-dark dark:text-blue hover:text-primary hover:dark:text-dark"
                   size={24}
                 />
               </a>
@@ -87,7 +87,7 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <AiOutlineSolution
-                  className="cursor-pointer hover:text-dark"
+                  className="cursor-pointer text-dark dark:text-blue hover:text-primary hover:dark:text-dark"
                   size={24}
                 />
               </a>

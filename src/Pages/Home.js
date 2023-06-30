@@ -18,7 +18,7 @@ export default function Home({ setErrorPage }) {
       <div className="flex justify-center mt-52 gap-20 relative">
         <div className="w-96 h-auto mt-20 text-center z-20">
           <h1
-            className="text-6xl font-semibold text-shadow"
+            className="text-6xl text-dark dark:text-blue font-semibold text-shadow"
           >
             Joshua Nelson
           </h1>
