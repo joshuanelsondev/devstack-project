@@ -255,6 +255,41 @@ export default function Nav({ toggleMode }) {
                   Contact
                 </p>
               </div>
+              <div>
+                {darkTheme ? (
+                  <div
+                    className={`flex items-center gap-1 group cursor-pointer text-dark`}
+                  >
+                    <MdOutlineDarkMode
+                      onClick={toggleTheme}
+                      className="rounded-full p-2 group-hover:scale-110"
+                      size={30}
+                    />
+                    <p
+                      className="text-sm font-semibold hover:scale-110 group-hover:scale-110"
+                      onClick={toggleTheme}
+                    >
+                      Dark
+                    </p>
+                  </div>
+                ) : (
+                  <div
+                    className={`flex items-center gap-1 group cursor-pointer text-secondary`}
+                  >
+                    <MdOutlineLightMode
+                      onClick={toggleTheme}
+                      className="rounded-full p-2 group-hover:scale-110"
+                      size={30}
+                    />
+                    <p
+                      className="text-sm font-semibold hover:scale-110 group-hover:scale-110"
+                      onClick={toggleTheme}
+                    >
+                      Light
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
