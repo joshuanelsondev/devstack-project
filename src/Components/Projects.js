@@ -29,10 +29,10 @@ export default function Projects({setErrorPage}) {
         <h1 className="text-5xl text-primary dark:text-blue font-semibold mt-20">Portfolio</h1>
         {isLoading ? (
           <div className="w-full flex justify-center items-center mt-52 gap-2">
-            <h1 className="text-blue text-3xl">
+            <h1 className="text-primary dark:text-blue text-3xl">
               Loading
             </h1>
-            <RiLoader5Fill className="text-blue animate-spin-slow" size={30}/>
+            <RiLoader5Fill className="text-primary dark:text-blue animate-spin-slow" size={30}/>
           </div>
         ) : (
           <>
