@@ -26,7 +26,7 @@ export default function Projects({setErrorPage}) {
 
     return (
       <div className="flex flex-col items-center md:items-start">
-        <h1 className="text-5xl text-blue font-semibold mt-20">Portfolio</h1>
+        <h1 className="text-5xl text-primary dark:text-blue font-semibold mt-20">Portfolio</h1>
         {isLoading ? (
           <div className="w-full flex justify-center items-center mt-52 gap-2">
             <h1 className="text-blue text-3xl">

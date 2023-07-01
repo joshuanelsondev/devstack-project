@@ -16,7 +16,7 @@ export default function AboutComponent() {
 
     return (
       <div className="h-full w-full flex flex-col items-center relative">
-        <div className="bg-secondary dark:bg-dark p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl mt-20">
+        <div className="bg-secondary dark:bg-dark p-8 min-w-[300px] w-11/12 md:w-8/12 h-full rounded-3xl mt-20">
           <h1 className="text-primary dark:text-primary text-4xl text-center">
             Welcome to my portfolio website!
           </h1>
@@ -131,7 +131,7 @@ export default function AboutComponent() {
             </div>
           )}
           {!showModal && (
-            <img src={pursuit_headshot} alt="headshot" className="mt-4 relative bottom-0 lg:absolute " />
+            <img src={pursuit_headshot} alt="headshot" className="mt-4 relative bottom-0" />
           )}
         </div>
       </div>
