@@ -58,8 +58,10 @@ export default function ProjectDetails() {
     }
 
     return (
-      <div className="flex flex-col gap-10 p-10 bg-primary dark:bg-dark rounded-xl font-semibold shadow-xl shadow-primary">
-        <h1 className="text-5xl text-blue font-semibold">{project.title}</h1>
+      <div className="flex flex-col gap-10 p-10 bg-secondary  dark:bg-dark rounded-xl font-semibold shadow-xl shadow-primary">
+        <h1 className="text-5xl text-primary dark:text-blue font-semibold">
+          {project.title}
+        </h1>
         <a href={project.image} target="_blank" rel="noreferrer">
           <img
             src={project.image}
@@ -67,7 +69,9 @@ export default function ProjectDetails() {
             className="rounded shadow-lg shadow-primary w-full h-auto"
           />
         </a>
-        <p className="text-lg text-blue leading-loose">{project.description}</p>
+        <p className="text-lg text-dark font-normal dark:text-blue leading-loose">
+          {project.description}
+        </p>
         <ul className="flex gap-x-4 flex-wrap">
           {project.tech.map((str, index) => {
             return (
@@ -87,7 +91,7 @@ export default function ProjectDetails() {
               className="text-blue"
             >
               <AiFillGithub
-                className="p-2 hover:text-primary rounded-full"
+                className="p-2 text-primary hover:text-dark hover:dark:text-primary rounded-full"
                 size={40}
               />
             </a>
@@ -98,7 +102,7 @@ export default function ProjectDetails() {
               className="text-blue"
             >
               <AiOutlineExport
-                className="p-2 hover:text-primary rounded-full"
+                className="p-2 text-primary hover:text-dark hover:dark:text-primary  rounded-full"
                 size={40}
               />
             </a>
@@ -109,7 +113,7 @@ export default function ProjectDetails() {
               className="text-blue flex flex-col gap-2 items-center"
             >
               <MdModeEdit
-                className="peer hover:text-primary rounded-full p-2"
+                className="peer text-primary hover:text-dark hover:dark:text-primary  rounded-full p-2"
                 size={40}
               />
               <p className="text-blue font-bold invisible peer-hover:visible absolute top-10">
@@ -121,7 +125,7 @@ export default function ProjectDetails() {
               className="flex flex-col items-center text-blue gap-2"
             >
               <MdDelete
-                className="peer hover:text-primary rounded-full p-2"
+                className="peer text-primary hover:text-dark hover:dark:text-primary  rounded-full p-2"
                 size={40}
               />
               <p className="text-blue font-bold invisible peer-hover:visible absolute top-10">
@@ -133,8 +137,8 @@ export default function ProjectDetails() {
 
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-transparent">
-            <div className="bg-dark h-40 w-96 rounded-xl flex flex-col items-center justify-center gap-4">
-              <p className="text-blue text-lg font-bold">
+            <div className="bg-secondary dark:bg-dark h-40 w-96 rounded-xl flex flex-col items-center justify-center gap-4">
+              <p className="text-dark dark:text-blue text-lg font-bold">
                 Are you sure you want to delete this project?
               </p>
               <div className="flex gap-4">

@@ -17,11 +17,11 @@ export default function AboutComponent() {
     return (
       <div className="h-full w-full flex flex-col items-center relative">
         <div className="bg-secondary dark:bg-dark p-8 min-w-[300px] w-11/12 md:w-8/12 h-full rounded-3xl mt-20">
-          <h1 className="text-primary dark:text-primary text-4xl text-center">
+          <h1 className="text-primary font-semibold text-3xl text-center">
             Welcome to my portfolio website!
           </h1>
           <br />
-          <p className="text-dark dark:text-blue text-md">
+          <p className="text-dark dark:text-blue text-lg">
             This platform serves as a showcase for developers to present their
             projects in an organized and professional manner. Whether you're a
             seasoned developer or just starting out, this portfolio website
@@ -100,7 +100,7 @@ export default function AboutComponent() {
               <h2 className="text-3xl text-primary text-center">
                 Joshua Nelson
               </h2>
-              <p className="text-dark dark:text-blue text-md whitespace-break-spaces">
+              <p className="text-dark dark:text-blue text-lg whitespace-break-spaces">
                 I am a full stack web developer fellow at Pursuit, an intensive
                 12-month software engineering fellowship with a 9% acceptance
                 rate. My journey in software engineering is driven by a deep
