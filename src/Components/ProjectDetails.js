@@ -31,7 +31,7 @@ export default function ProjectDetails() {
             }
             setIsLoading(false);
         })
-    }, [id]);
+    }, [id, navigate]);
 
     if (isLoading) {
       return (

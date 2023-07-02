@@ -22,7 +22,7 @@ export default function Projects({setErrorPage}) {
                 console.log(error);
                 setIsLoading(false);
             });
-    }, []);
+    }, [setErrorPage]);
 
     return (
       <div className="flex flex-col items-center md:items-start">

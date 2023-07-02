@@ -9,6 +9,7 @@ export default function FourOFour({ errorPage, setErrorPage }) {
 
   useEffect(() => {
     toggleError()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleError = () => {

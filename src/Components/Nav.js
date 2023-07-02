@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import DevStackLogoLight from "../assets/DevStackLogoLight.png";
 import DevStackLogoBlue from "../assets/DevStackLogoBlue.png";
@@ -15,40 +15,13 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
-const usePrefersDarkMode = () => {
-  const [prefersDarkMode, setPrefersDarkMode] = useState(
-    window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    const handleChange = (event) => {
-      setPrefersDarkMode(event.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
-  }, []);
-
-  return prefersDarkMode;
-};
 
 export default function Nav({ toggleMode }) {
 
-    const prefersDarkMode = usePrefersDarkMode();
-    const [darkTheme, setDarkTheme] = useState(prefersDarkMode);  
     const [showNav, setShowNav] = useState(false)
     const navigate = useNavigate();
     const location = useLocation();
-
-    useEffect(() => {
-      document.documentElement.classList.toggle("dark", darkTheme);
-    }, [darkTheme]);
 
     const toggleTheme = () => {
       toggleMode();
