@@ -43,7 +43,7 @@ export default function Nav({ toggleMode }) {
 
     return (
       <div className="h-20 w-full absolute z-50">
-        <div className="dark:invisible fixed flex w-full h-auto justify-center bg-secondary lg:bg-gray lg:absolute lg:right-0 lg:h-auto lg:w-60">
+        <div className="dark:invisible fixed flex w-full h-auto justify-center bg-secondary lg:bg-[transparent] lg:absolute lg:right-0 lg:h-auto lg:w-60">
           <img
             src={DevStackLogoBlue}
             alt="DevStack Logo"
