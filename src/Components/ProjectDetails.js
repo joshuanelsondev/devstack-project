@@ -137,20 +137,20 @@ export default function ProjectDetails() {
 
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-transparent">
-            <div className="bg-secondary dark:bg-dark h-40 w-96 rounded-xl flex flex-col items-center justify-center gap-4">
+            <div className="bg-secondary shadow-lg shadow-dark dark:bg-dark h-40 w-96 rounded-xl flex flex-col items-center justify-center gap-4">
               <p className="text-dark dark:text-blue text-lg font-bold">
                 Are you sure you want to delete this project?
               </p>
               <div className="flex gap-4">
                 <button
                   onClick={toggleModal}
-                  className="text-blue font-bold bg-primary p-1 rounded-lg hover:outline outline-blue"
+                  className="text-blue font-bold bg-primary p-1 rounded-lg hover:scale-90 hover:outline outline-dark dark:outline-blue"
                 >
-                  cancel
+                  Cancel
                 </button>
                 <button
                   onClick={deleteProject}
-                  className="text-blue font-bold bg-red p-1 rounded-lg hover:outline outline-blue"
+                  className="text-blue font-bold bg-red p-1 rounded-lg hover:scale-90 hover:outline outline-dark dark:outline-blue"
                 >
                   Delete
                 </button>
