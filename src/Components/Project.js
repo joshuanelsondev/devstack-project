@@ -32,11 +32,13 @@ export default function Project({ project }) {
         </div>
         <Link
           to={`/projects/${project.id}`}
-          className="text-3xl text-primary dark:text-blue font-semibold hover:text-primary"
+          className="text-3xl text-primary dark:text-blue font-semibold"
         >
-          {project.title}
+          <p className="hover:text-dark hover:dark:text-primary">{project.title}</p>
         </Link>
-        <p className="text-dark dark:text-blue text-lg">{project.description}</p>
+        <p className="text-dark dark:text-blue text-lg">
+          {project.description}
+        </p>
         <ul className="flex flex-wrap justify-start gap-x-4">
           {project.tech.map((str, index) => {
             return (

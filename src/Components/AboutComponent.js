@@ -37,7 +37,7 @@ export default function AboutComponent() {
                   rel="noreferrer"
                 >
                   <AiFillLinkedin
-                    className="p-2 peer cursor-pointer text-primary rounded-full dark:text-blue hover:text-dark hover:dark:bg-dark"
+                    className="p-2 peer cursor-pointer text-primary rounded-full dark:text-blue hover:bg-secondary hover:dark:bg-dark"
                     size={40}
                   />
                 </a>
@@ -53,7 +53,7 @@ export default function AboutComponent() {
                   rel="noreferrer"
                 >
                   <AiOutlineGithub
-                    className="p-2 cursor-pointer text-primary rounded-full dark:text-blue hover:text-dark hover:dark:bg-dark"
+                    className="p-2 cursor-pointer text-primary rounded-full dark:text-blue hover:bg-secondary hover:dark:bg-dark"
                     size={40}
                   />
                 </a>
@@ -69,7 +69,7 @@ export default function AboutComponent() {
                   rel="noreferrer"
                 >
                   <AiOutlineSolution
-                    className="p-2 cursor-pointer text-primary rounded-full dark:text-blue hover:text-dark hover:dark:bg-dark"
+                    className="p-2 cursor-pointer text-primary rounded-full dark:text-blue hover:bg-secondary hover:dark:bg-dark"
                     size={40}
                   />
                 </a>

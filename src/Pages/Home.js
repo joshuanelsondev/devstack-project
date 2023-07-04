@@ -34,11 +34,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillLinkedin
-                  className="p-2 text-primary dark:text-secondary cursor-pointer hover:bg-primary  rounded-full"
+                  className="p-2 text-primary dark:text-blue cursor-pointer hover:bg-secondary hover:dark:bg-dark  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-blue font-semibold invisible peer-hover:visible">
                 LinkedIn
               </p>
             </div>
@@ -51,11 +51,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiOutlineGithub
-                  className="p-2 text-primary hover:bg-primary dark:text-secondary cursor-pointer  rounded-full"
+                  className="p-2 text-primary hover:bg-secondary hover:dark:bg-dark dark:text-blue cursor-pointer  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-blue font-semibold invisible peer-hover:visible">
                 GitHub
               </p>
             </div>
@@ -68,11 +68,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillFacebook
-                  className="p-2 text-primary dark:text-secondary cursor-pointer hover:bg-primary  rounded-full"
+                  className="p-2 text-primary dark:text-blue cursor-pointer hover:bg-secondary hover:dark:bg-dark  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-blue font-semibold invisible peer-hover:visible">
                 Facebook
               </p>
             </div>
@@ -85,11 +85,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillInstagram
-                  className="p-2 text-primary dark:text-secondary cursor-pointer hover:bg-primary  rounded-full"
+                  className="p-2 text-primary dark:text-blue cursor-pointer hover:bg-secondary hover:dark:bg-dark  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-blue font-semibold invisible peer-hover:visible">
                 Instagram
               </p>
             </div>

@@ -17,7 +17,7 @@ export default function FourOFour({ errorPage, setErrorPage }) {
   }
 
   return (
-    <div className="flex  flex-col items-center h-full w-full">
+    <div className="flex  flex-col items-center h-screen w-full">
       <HiArrowLeftCircle onClick={() => navigate("/projects")} className="text-secondary absolute left-0 m-10 cursor-pointer hover:text-primary" size={40} />
       <img src={FourOFourLogo} alt="404 Logo" className="h-96 w-96"/>
       <h1 className="text-4xl text-dark">Sorry, Page Not Found</h1>
