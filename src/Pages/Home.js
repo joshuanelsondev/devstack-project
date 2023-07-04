@@ -14,7 +14,7 @@ export default function Home({ setErrorPage }) {
   }, [setErrorPage]);
 
   return (
-    <div className="h-full w-full flex flex-col bg-imageHome bg-no-repeat bg-right-bottom">
+    <div className="h-screen w-full flex flex-col bg-imageHome bg-no-repeat bg-right-bottom">
       <div className="flex justify-center mt-52 gap-20 relative">
         <div className="w-96 xl:w-9/12 h-auto mt-20 text-center z-20">
           <h1
