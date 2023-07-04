@@ -130,9 +130,9 @@ export default function AboutComponent() {
               </p>
             </div>
           )}
-          {!showModal && (
+          {/* {!showModal && (
             <img src={pursuit_headshot} alt="headshot" className="mt-4 relative bottom-0" />
-          )}
+          )} */}
         </div>
       </div>
     );

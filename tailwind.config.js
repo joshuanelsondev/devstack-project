@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        image: "url('/src/assets/pursuit_headshot.png')",
+        imageAbout: "url('/src/assets/pursuit_headshot.png')",
+        imageHome: "url('/src/assets/headshot-copy.png')",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
@@ -18,10 +19,6 @@ module.exports = {
       gray: "#E1E5F2",
       white: "#FFFFFF",
       red: "#E73B3B",
-      light: {
-        text: "#021d28",
-        // Add more light mode colors
-      },
     },
   },
   plugins: [

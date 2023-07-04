@@ -14,16 +14,16 @@ export default function Home({ setErrorPage }) {
   }, [setErrorPage]);
 
   return (
-    <div className="h-full w-full flex flex-col">
+    <div className="h-full w-full flex flex-col bg-imageHome bg-no-repeat bg-right-bottom">
       <div className="flex justify-center mt-52 gap-20 relative">
-        <div className="w-96 h-auto mt-20 text-center z-20">
+        <div className="w-96 xl:w-9/12 h-auto mt-20 text-center z-20">
           <h1
-            className="text-6xl text-dark dark:text-blue font-semibold text-shadow"
+            className="text-6xl xl:text-8xl text-primary dark:text-secondary font-semibold text-shadow"
           >
             Joshua Nelson
           </h1>
-          <h2 className="text-3xl mt-2 font-semibold text-primary dark:text-dark">
-            <span className="text-dark dark:text-blue">Full Stack</span> Developer
+          <h2 className="text-3xl mt-2 font-semibold text-dark dark:text-dark">
+            <span className="text-primary dark:text-secondary">Full Stack</span> Developer
           </h2>
           <div className="flex mt-4 gap-8 justify-center">
             <div className="flex flex-col items-center gap-2">
@@ -34,11 +34,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillLinkedin
-                  className="p-2 text-dark dark:text-blue cursor-pointer hover:bg-primary dark:hover:bg-dark rounded-full"
+                  className="p-2 text-primary dark:text-secondary cursor-pointer hover:bg-primary  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
                 LinkedIn
               </p>
             </div>
@@ -51,11 +51,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiOutlineGithub
-                  className="p-2 text-dark hover:bg-primary dark:text-blue cursor-pointer dark:hover:bg-dark rounded-full"
+                  className="p-2 text-primary hover:bg-primary dark:text-secondary cursor-pointer  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
                 GitHub
               </p>
             </div>
@@ -68,11 +68,11 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillFacebook
-                  className="p-2 text-dark dark:text-blue cursor-pointer hover:bg-primary dark:hover:bg-dark rounded-full"
+                  className="p-2 text-primary dark:text-secondary cursor-pointer hover:bg-primary  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
                 Facebook
               </p>
             </div>
@@ -85,21 +85,21 @@ export default function Home({ setErrorPage }) {
                 rel="noreferrer"
               >
                 <AiFillInstagram
-                  className="p-2 text-dark dark:text-blue cursor-pointer hover:bg-primary dark:hover:bg-dark rounded-full"
+                  className="p-2 text-primary dark:text-secondary cursor-pointer hover:bg-primary  rounded-full"
                   size={40}
                 />
               </a>
-              <p className="text-dark dark:text-blue font-semibold invisible peer-hover:visible">
+              <p className="text-primary dark:text-secondary font-semibold invisible peer-hover:visible">
                 Instagram
               </p>
             </div>
           </div>
         </div>
-        <img
+        {/* <img
           src={headshotCopy}
           alt="headshot"
           className="fixed bottom-0 right-0 opacity-70 dark:opacity-40"
-        />
+        /> */}
       </div>
     </div>
   );

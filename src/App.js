@@ -38,7 +38,7 @@ function App() {
 
 
   return (
-    <div className="App w-full h-full relative text-dark dark:text-blue  dark:bg-gradient-to-b dark:from-dark dark:from-0% dark:via-primary dark:via-100% dark:to-dark">
+    <div className="App w-full h-full relative text-dark dark:bg-gradient-to-b from-dark via-primary to-dark">
       <Router>
         {!errorPage && <Nav toggleMode={toggleMode} />}
         <Routes>
@@ -62,7 +62,6 @@ function App() {
       </Router>
     </div>
   );
-
 }
 
 export default App;
