@@ -18,12 +18,12 @@ export default function Home({ setErrorPage }) {
       <div className="flex justify-center mt-52 gap-20 relative">
         <div className="w-96 xl:w-9/12 h-auto mt-20 text-center z-20">
           <h1
-            className="text-6xl xl:text-8xl text-primary dark:text-secondary font-semibold text-shadow"
+            className="text-6xl xl:text-8xl text-primary dark:text-blue font-semibold text-shadow"
           >
             Joshua Nelson
           </h1>
           <h2 className="text-3xl mt-2 font-semibold text-dark dark:text-dark">
-            <span className="text-primary dark:text-secondary">Full Stack</span> Developer
+            <span className="text-primary dark:text-blue">Full Stack</span> Developer
           </h2>
           <div className="flex mt-4 gap-8 justify-center">
             <div className="flex flex-col items-center gap-2">

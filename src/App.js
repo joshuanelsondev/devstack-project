@@ -38,7 +38,7 @@ function App() {
 
 
   return (
-    <div className="w-full h-full text-dark dark:bg-gradient-to-b from-dark via-primary to-dark">
+    <div className="w-full h-full text-dark bg-gradient-to-b from-white via-gray to-white dark:bg-gradient-to-b dark:from-dark dark:via-primary dark:to-dark">
       <Router>
         {!errorPage && <Nav toggleMode={toggleMode} />}
         <Routes>

@@ -1,7 +1,7 @@
-
+import ContactForm from "../Components/ContactForm";
 
 export default function Contact() {
     return (
-        <div></div>
+        <div className="h-screen w-full "><ContactForm /></div>
     )
 }

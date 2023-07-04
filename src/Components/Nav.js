@@ -37,7 +37,7 @@ export default function Nav({ toggleMode }) {
 
     }
 
-    const isDarkText = (path) => {
+    const currentPage = (path) => {
       return location.pathname === path
     };
 
@@ -63,13 +63,12 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdHome
               onClick={() => navigate("/")}
-              className={`peer text-dark hover:bg-primary dark:text-secondary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
-                isDarkText("/") ? "bg-primary" : "text-dark"
-              } dark:${isDarkText("/") ? "bg-dark" : "text-secondary"}`}
+              className={`peer text-primary hover:bg-secondary dark:text-blue dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                currentPage("/") && "bg-secondary"} dark:${currentPage("/") && "bg-dark"}`}
               size={40}
             />
             <p
-              className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible"
+              className="invisible text-primary dark:text-blue font-semibold peer-hover:visible"
               onClick={() => toggleNav()}
             >
               Home
@@ -78,52 +77,50 @@ export default function Nav({ toggleMode }) {
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdAccountCircle
               onClick={() => navigate("/about")}
-              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
-                isDarkText("/about") ? "bg-primary" : "text-dark"
-              }  dark:${isDarkText("/about") ? "bg-dark" : "text-secondary"}`}
+              className={`peer text-primary dark:text-blue hover:bg-secondary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                currentPage("/about") && "bg-secondary"}  dark:${currentPage("/about") && "bg-dark"}`}
               size={40}
             />
-            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-primary dark:text-blue font-semibold peer-hover:visible">
               About
             </p>
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstore
               onClick={() => navigate("/projects")}
-              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark p-[8px] rounded-full cursor-pointer ${
-                isDarkText("/projects") ? "bg-primary" : "text-dark"
-              }  dark:${
-                isDarkText("/projects") ? "bg-dark" : "text-secondary"
+              className={`peer text-primary dark:text-blue hover:bg-secondary dark:hover:bg-dark p-[8px] rounded-full cursor-pointer ${
+                currentPage("/projects") && "bg-secondary"}  dark:${
+                currentPage("/projects") && "bg-dark"
               }`}
               size={40}
             />
-            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-primary dark:text-blue font-semibold peer-hover:visible">
               Portfolio
             </p>
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <AiOutlineAppstoreAdd
               onClick={() => navigate("projects/new")}
-              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
-                isDarkText("/projects/new") ? "bg-primary" : "text-dark"
+              className={`peer text-primary dark:text-blue hover:bg-secondary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                currentPage("/projects/new") && "bg-secondary"
               }  dark:${
-                isDarkText("/projects/new") ? "bg-dark" : "text-secondary"
+                currentPage("/projects/new") && "bg-dark"
               }`}
               size={40}
             />
-            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-primary dark:text-blue font-semibold peer-hover:visible">
               Add Project
             </p>
           </div>
           <div className="flex items-center lg:gap-4 md:gap-1">
             <MdEmail
               onClick={() => navigate("/contact")}
-              className={`peer text-dark dark:text-secondary hover:bg-primary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
-                isDarkText("/contact") ? "bg-primary" : "text-dark"
-              }  dark:${isDarkText("/contact") ? "bg-dark" : "text-secondary"}`}
+              className={`peer text-primary dark:text-blue hover:bg-secondary dark:hover:bg-dark rounded-full p-2 cursor-pointer ${
+                currentPage("/contact") && "bg-secondary"
+              }  dark:${currentPage("/contact") && "bg-dark"}`}
               size={40}
             />
-            <p className="invisible text-dark dark:text-secondary font-semibold peer-hover:visible">
+            <p className="invisible text-primary dark:text-blue font-semibold peer-hover:visible">
               Contact
             </p>
           </div>
@@ -132,20 +129,20 @@ export default function Nav({ toggleMode }) {
               <div className="absolute invisible dark:visible flex items-center lg:gap-4 md:gap-1">
                 <MdOutlineDarkMode
                   onClick={toggleTheme}
-                  className="peer text-secondary hover:bg-dark rounded-full p-2 cursor-pointer"
+                  className="peer text-blue hover:bg-dark rounded-full p-2 cursor-pointer"
                   size={40}
                 />
-                <p className="invisible text-secondary font-semibold peer-hover:visible">
+                <p className="invisible text-blue font-semibold peer-hover:visible">
                   Dark
                 </p>
               </div>
               <div className="absolute dark:invisible flex items-center lg:gap-4 md:gap-1">
                 <MdOutlineLightMode
                   onClick={toggleTheme}
-                  className="peer text-dark hover:bg-primary rounded-full p-2 cursor-pointer"
+                  className="peer text-primary hover:bg-secondary rounded-full p-2 cursor-pointer"
                   size={40}
                 />
-                <p className="invisible text-dark font-semibold peer-hover:visible">
+                <p className="invisible text-primary font-semibold peer-hover:visible">
                   Light
                 </p>
               </div>
@@ -164,7 +161,7 @@ export default function Nav({ toggleMode }) {
             <div className="fixed top-9 ml-20 w-fit pr-1 z-40 h-fit bg-primary transition-transform duration-1000 ease-in-out transform translate-y-4 lg:hidden">
               <div
                 className={`flex items-center gap-1 group cursor-pointer ${
-                  isDarkText("/") ? "text-dark" : "text-secondary"
+                  currentPage("/") ? "text-dark" : "text-secondary"
                 }`}
                 onClick={() => navAndToggle("/")}
               >
@@ -178,7 +175,7 @@ export default function Nav({ toggleMode }) {
               </div>
               <div
                 className={`flex items-center gap-1 group cursor-pointer ${
-                  isDarkText("/about") ? "text-dark" : "text-secondary"
+                  currentPage("/about") ? "text-dark" : "text-secondary"
                 }`}
                 onClick={() => navAndToggle("/about")}
               >
@@ -192,7 +189,7 @@ export default function Nav({ toggleMode }) {
               </div>
               <div
                 className={`flex items-center gap-1 group cursor-pointer ${
-                  isDarkText("/projects") ? "text-dark" : "text-secondary"
+                  currentPage("/projects") ? "text-dark" : "text-secondary"
                 }`}
                 onClick={() => navAndToggle("/projects")}
               >
@@ -206,7 +203,7 @@ export default function Nav({ toggleMode }) {
               </div>
               <div
                 className={`flex items-center gap-1 group w-max cursor-pointer ${
-                  isDarkText("/projects/new") ? "text-dark" : "text-secondary"
+                  currentPage("/projects/new") ? "text-dark" : "text-secondary"
                 }`}
                 onClick={() => navAndToggle("projects/new")}
               >
@@ -220,7 +217,7 @@ export default function Nav({ toggleMode }) {
               </div>
               <div
                 className={`flex items-center gap-1 group cursor-pointer ${
-                  isDarkText("/contact") ? "text-dark" : "text-secondary"
+                  currentPage("/contact") ? "text-dark" : "text-secondary"
                 }`}
                 onClick={() => navAndToggle("/contact")}
               >
