@@ -95,11 +95,6 @@ export default function Home({ setErrorPage }) {
             </div>
           </div>
         </div>
-        {/* <img
-          src={headshotCopy}
-          alt="headshot"
-          className="fixed bottom-0 right-0 opacity-70 dark:opacity-40"
-        /> */}
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function AboutComponent() {
           showModal && "bg-none"
         }`}
       >
-        <div className="flex flex-col items-center relative w-full h-full">
+        <div className="flex flex-col text-center relative w-full h-full">
           <div className={`${showModal && "invisible"}`}>
             <h2
               onClick={toggleModal}
