@@ -81,7 +81,7 @@ export default function AboutComponent() {
           </div>
         </div>
         {showModal && (
-          <div className="flex flex-col gap-4 bg-secondary dark:bg-dark mt-4 p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl absolute top-40 z-60">
+          <div className="flex flex-col gap-4 bg-secondary dark:bg-dark p-8 min-w-[300px] w-11/12 md:w-8/12 h-fit rounded-3xl absolute top-20 md:top-32 z-60">
             <AiOutlineCloseSquare
               onClick={toggleModal}
               className="text-dark dark:text-blue cursor-pointer hover:text-primary hover:dark:text-primary"
