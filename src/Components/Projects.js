@@ -43,12 +43,12 @@ export default function Projects({setErrorPage}) {
             ))}
             {projects.length === 0 && (
               <div className="mt-10 flex items-center gap-4 z-10">
-                <h2 className="text-4xl text-blue">Add Project</h2>
+                <h2 className="text-4xl text-primary dark:text-blue">Add Project</h2>
                 <Link
                   to={"/projects/new"}
                   className="hover:bg-dark rounded-full p-2"
                 >
-                  <MdLibraryAdd className="text-blue" size={24} />
+                  <MdLibraryAdd className="text-primary dark:text-blue" size={24} />
                 </Link>
               </div>
             )}

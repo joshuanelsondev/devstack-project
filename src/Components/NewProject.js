@@ -61,7 +61,7 @@ export default function NewProject() {
 
     return (
       <div className="flex justify-center mx-4 pt-28 pb-10">
-        <form className="flex flex-col items-center gap-6 sm:gap-8 z-10 text-blue bg-gradient-to-r from-dark to-transparent h-fit w-11/12 sm:w-[600px] p-8 sm:px-20 mb-10 rounded-xl shadow-xl shadow-primary">
+        <form className="flex flex-col items-center gap-6 sm:gap-8 z-10 text-blue bg-dark h-fit w-11/12 sm:w-[600px] p-8 sm:px-20 mb-10 rounded-xl shadow-xl shadow-primary">
           <h1 className="text-blue text-4xl font-bold self-center">Add a Project</h1>
           {errorMessage && <p className="text-red">{errorMessage}</p>}
           <div className="flex flex-col w-full">
