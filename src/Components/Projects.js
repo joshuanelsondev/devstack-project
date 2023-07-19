@@ -5,6 +5,7 @@ import Project from "./Project";
 import { MdLibraryAdd } from "react-icons/md";
 import { RiLoader5Fill } from "react-icons/ri";
 
+const { projectData } = require("../assets/projectData");
 const API = process.env.REACT_APP_API_URL;
 
 export default function Projects({setErrorPage}) {
@@ -12,16 +13,19 @@ export default function Projects({setErrorPage}) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setErrorPage(false);
-        axios.get(`${API}/projects`)
-            .then((res) => {
-                setProjects(res.data);
-                setIsLoading(false);
-            })
-            .catch((error) => {
-                console.log(error);
-                setIsLoading(false);
-            });
+        // setErrorPage(false);
+        // axios.get(`${API}/projects`)
+        //     .then((res) => {
+        //         setProjects(res.data);
+        //         setIsLoading(false);
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //         setIsLoading(false);
+        //     });
+        setProjects(projectData);
+        setIsLoading()
+        
     }, [setErrorPage]);
 
     return (

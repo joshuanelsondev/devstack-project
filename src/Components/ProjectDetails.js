@@ -4,6 +4,8 @@ import axios from "axios";
 import { MdModeEdit, MdDelete } from "react-icons/md";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { RiLoader5Fill } from "react-icons/ri";
+const { projectData } = require("../assets/projectData");
+
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -17,20 +19,23 @@ export default function ProjectDetails() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        setIsLoading(true);
+        // setIsLoading(true);
 
-        axios
-        .get(`${API}/projects/${id}`)
-        .then((res) => {
-            setProject(res.data);
-            setIsLoading(false);
-        })
-        .catch((error) => {
-            if (error.response.status === 404) {
-              navigate('*')
-            }
-            setIsLoading(false);
-        })
+        // axios
+        // .get(`${API}/projects/${id}`)
+        // .then((res) => {
+        //     setProject(res.data);
+        //     setIsLoading(false);
+        // })
+        // .catch((error) => {
+        //     if (error.response.status === 404) {
+        //       navigate('*')
+        //     }
+        //     setIsLoading(false);
+        // })
+        setIsLoading(false)
+        let currentProject = projectData.find(project => project.id === id)
+        setProject(currentProject)
     }, [id, navigate]);
 
     if (isLoading) {
