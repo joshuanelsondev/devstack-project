@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
+html {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,7 +11,10 @@ html, body, #root {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Fraunces', serif;
   min-height: 100vh;
-  width: 100%;
+}
+
+body {
+  overscroll-behavior: none;
 }
 
 code {
