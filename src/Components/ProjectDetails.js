@@ -96,7 +96,7 @@ export default function ProjectDetails() {
               className="text-blue"
             >
               <AiFillGithub
-                className="p-2 text-primary hover:text-dark hover:dark:text-primary rounded-full"
+                className="p-2 text-primary dark:text-blue hover:text-dark hover:dark:text-primary rounded-full"
                 size={40}
               />
             </a>
@@ -107,7 +107,7 @@ export default function ProjectDetails() {
               className="text-blue"
             >
               <AiOutlineExport
-                className="p-2 text-primary hover:text-dark hover:dark:text-primary  rounded-full"
+                className="p-2 text-primary dark:text-blue hover:text-dark hover:dark:text-primary  rounded-full"
                 size={40}
               />
             </a>
@@ -118,24 +118,18 @@ export default function ProjectDetails() {
               className="text-blue flex flex-col gap-2 items-center"
             >
               <MdModeEdit
-                className="peer text-primary hover:text-dark hover:dark:text-primary  rounded-full p-2"
+                className="peer text-primary dark:text-blue hover:text-dark hover:dark:text-primary  rounded-full p-2"
                 size={40}
               />
-              <p className="text-blue font-bold invisible peer-hover:visible absolute top-10">
-                edit
-              </p>
             </Link>
             <button
               onClick={toggleModal}
               className="flex flex-col items-center text-blue gap-2"
             >
               <MdDelete
-                className="peer text-primary hover:text-dark hover:dark:text-primary  rounded-full p-2"
+                className="peer text-primary dark:text-blue hover:text-dark hover:dark:text-primary  rounded-full p-2"
                 size={40}
               />
-              <p className="text-blue font-bold invisible peer-hover:visible absolute top-10">
-                delete
-              </p>
             </button>
           </div>
         </div>
