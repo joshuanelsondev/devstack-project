@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import Project from "./Project";
 import { MdLibraryAdd } from "react-icons/md";
 import { RiLoader5Fill } from "react-icons/ri";
 import { projectData } from "../assets/projectData";
-const API = process.env.REACT_APP_API_URL;
+// const API = process.env.REACT_APP_API_URL;
 
 export default function Projects({setErrorPage}) {
     const [projects, setProjects] = useState([]);

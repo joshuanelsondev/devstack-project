@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import DevStackLogoLight from "../assets/DevStackLogoLight.png";
-import DevStackLogoBlue from "../assets/DevStackLogoBlue.png";
+import DevStackLogoLight from "../assets/LogoLight.png";
+import DevStackLogoBlue from "../assets/LogoDark.png";
 import {
   MdAccountCircle,
   MdHome,

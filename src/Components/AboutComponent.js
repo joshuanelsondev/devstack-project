@@ -1,5 +1,5 @@
 import { useState } from "react";
-import pursuit_headshot from "../assets/pursuit_headshot.png";
+// import pursuit_headshot from "../assets/pursuit_headshot.png";
 import {
   AiFillLinkedin,
   AiOutlineGithub,

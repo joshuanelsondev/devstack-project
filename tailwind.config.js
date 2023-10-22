@@ -20,6 +20,10 @@ module.exports = {
       white: "#FFFFFF",
       red: "#E73B3B",
     },
+    fontFamily: {
+      'roboto': ['Roboto Condensed', 'sans-serif'],
+      'open-sans': ['Open Sans', 'sans-serif']
+    },
   },
   plugins: [
     require("@tailwindcss/forms"),
@@ -27,4 +31,4 @@ module.exports = {
     require("tailwindcss-dark-mode"),
   ],
   darkMode: "class",
-};
+}
