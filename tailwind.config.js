@@ -22,7 +22,7 @@ module.exports = {
     },
     fontFamily: {
       'roboto': ['Roboto Condensed', 'sans-serif'],
-      'open-sans': ['Open Sans', 'sans-serif']
+      'open': ['Open Sans', 'sans-serif']
     },
   },
   plugins: [

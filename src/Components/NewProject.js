@@ -180,7 +180,7 @@ export default function NewProject() {
           <div className="flex w-full justify-end">
             <button
               onClick={handleSubmit}
-              className="text-primary font-semibold bg-secondary cursor-pointer p-2 rounded-xl w-20 z-30 h-auto hover:bg-primary hover:text-secondary"
+              className="text-primary font-semibold bg-secondary border border-primary cursor-pointer p-2 rounded-xl w-20 z-30 h-auto hover:bg-primary hover:text-secondary"
             >
               Save
             </button>
