@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import headshotCopy from "../assets/headshot-copy.png";
+
 import {
   AiFillLinkedin,
   AiOutlineGithub,
