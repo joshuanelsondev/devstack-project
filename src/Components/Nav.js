@@ -132,7 +132,7 @@ export default function Nav({ toggleMode }) {
                   className="peer text-blue hover:bg-dark rounded-full p-2 cursor-pointer"
                   size={40}
                 />
-                <p className="invisible text-blue font-semibold peer-hover:visible">
+                <p className="invisible text-blue font-semibold peer-hover:invisible dark:peer-hover:visible">
                   Dark
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function Nav({ toggleMode }) {
                   className="peer text-primary hover:bg-secondary rounded-full p-2 cursor-pointer"
                   size={40}
                 />
-                <p className="invisible text-primary font-semibold peer-hover:visible">
+                <p className="invisible text-primary font-semibold peer-hover:visible dark:peer-hover:invisible">
                   Light
                 </p>
               </div>
