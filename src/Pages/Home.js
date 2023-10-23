@@ -85,8 +85,9 @@ export default function Home({ setErrorPage }) {
             </Link>
           </div>
         </div>
+        
         <img
-          className="rounded-full h-96 w-96 object-contain pt-4 shadow-md shadow-primary border border-primary dark:border-blue opacity-80"
+          className="rounded-full h-96 w-96 object-contain pt-4 shadow-md shadow-primary border border-primary dark:border-blue opacity-90"
           src={imageHome}
           alt="Headshot"
         />
