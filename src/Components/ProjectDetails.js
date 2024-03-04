@@ -137,7 +137,7 @@ export default function ProjectDetails() {
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-transparent">
             <div className="bg-secondary shadow-lg shadow-dark dark:shadow-primary dark:bg-dark h-40 w-96 rounded-xl flex flex-col items-center justify-center gap-4">
-              <p className="text-dark dark:text-blue text-lg font-bold">
+              <p className="text-dark dark:text-blue text-lg font-bold text-center">
                 Are you sure you want to delete this project?
               </p>
               <div className="flex gap-4">
