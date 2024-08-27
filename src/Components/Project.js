@@ -36,11 +36,16 @@ export default function Project({ project }) {
         <p className="text-dark dark:text-blue text-lg">
           {project.description}
         </p>
-        <a href={project.image} target="_blank" rel="noreferrer" className="min-w-[300px] w-[300px] max-h-[200px] h-[200px]">
+        <a
+          href={project.image}
+          target="_blank"
+          rel="noreferrer"
+          className="min-w-[300px] w-[300px] max-h-[200px] h-[200px]"
+        >
           <img
             src={project.image}
             alt={project.title}
-            className="rounded shadow-lg shadow-primary min-w-[300px] w-[300px] max-h-[200px] h-[200px]"
+            className="rounded hover:shadow-md shadow-sm hover:shadow-primary min-w-[300px] w-[300px] max-h-[200px] h-[200px]"
           />
         </a>
       </div>
