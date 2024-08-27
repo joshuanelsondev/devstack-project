@@ -19,20 +19,6 @@ export default function ProjectDetails() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // setIsLoading(true);
-
-        // axios
-        // .get(`${API}/projects/${id}`)
-        // .then((res) => {
-        //     setProject(res.data);
-        //     setIsLoading(false);
-        // })
-        // .catch((error) => {
-        //     if (error.response.status === 404) {
-        //       navigate('*')
-        //     }
-        //     setIsLoading(false);
-        // })
         setIsLoading(false)
         let currentProject = projectData.find(project => project.id === id)
         setProject(currentProject)
